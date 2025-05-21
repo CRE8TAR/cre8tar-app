@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { PlayCircle, Bell } from 'lucide-react';
@@ -10,12 +9,9 @@ const TeaserSection: React.FC = () => {
       <div className="absolute inset-0 bg-hero-gradient opacity-10"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <ScrollTypingEffect
-            text="See CRE8TAR in Action"
-            tag="h2"
-            className="text-4xl md:text-5xl font-doto font-bold text-white mb-4"
-            delay={80}
-          />
+          <h2 className="text-4xl md:text-5xl font-doto font-bold text-white mb-4">
+            See CRE8TAR in Action
+          </h2>
           <ScrollTypingEffect
             text="Watch emotionally intelligent avatars as they evolve, interact, and respond to real users in real-time."
             tag="p"
@@ -30,12 +26,9 @@ const TeaserSection: React.FC = () => {
               <PlayCircle className="h-20 w-20 text-cre8-purple opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300" />
             </div>
             
-            <ScrollTypingEffect
-              text="Video Teaser Coming Soon"
-              tag="h3"
-              className="text-2xl font-bold text-white mb-2"
-              delay={70}
-            />
+            <h3 className="text-2xl font-bold text-white mb-2">
+              Video Teaser Coming Soon
+            </h3>
             <ScrollTypingEffect
               text="Our team is preparing a cinematic demo that highlights the dynamic emotional depth of CRE8TAR avatars. Stay tuned."
               tag="p"
