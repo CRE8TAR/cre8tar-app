@@ -128,6 +128,7 @@ const UseCasesSection: React.FC = () => {
             text="Ready to Own Your Digital Future?"
             tag="h3"
             className="text-2xl md:text-3xl text-white font-bold mb-6"
+          </div>
           
           <ScrollTypingEffect
             text="Secure your unique emotional avatar NFT and join the next generation of digital ownership on the blockchain."
