@@ -1,7 +1,5 @@
-
 import React from 'react';
 import { Shield, Brain, Sparkles, Grid } from 'lucide-react';
-import ScrollTypingEffect from './ScrollTypingEffect';
 
 const AboutSection: React.FC = () => {
   return (
@@ -9,43 +7,30 @@ const AboutSection: React.FC = () => {
       <div className="absolute inset-0 bg-hero-gradient opacity-10"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <ScrollTypingEffect
-            text="A New Era of Digital Companions"
-            tag="h2"
-            className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-6"
-            delay={70}
-          />
-          <ScrollTypingEffect
-            text="CRE8TAR blends emotional AI with decentralized technology to bring your avatars to life. 
-            These aren't just digital characters—they're companions that learn from you, adapt to your emotions, and grow alongside you."
-            tag="p"
-            className="text-white max-w-3xl mx-auto font-doto"
-            delay={30}
-          />
+          <h2 className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-6">
+            A New Era of Digital Companions
+          </h2>
+          <p className="text-white max-w-3xl mx-auto font-doto">
+            CRE8TAR blends emotional AI with decentralized technology to bring your avatars to life.
+            These aren't just digital characters—they're companions that learn from you, adapt to your emotions,
+            and grow alongside you.
+          </p>
         </div>
 
         <div className="mb-20">
-          <ScrollTypingEffect
-            text="What is CRE8TAR?"
-            tag="h3"
-            className="text-3xl font-bold text-cre8-purple mb-6"
-            delay={60}
-          />
-          <ScrollTypingEffect
-            text="CRE8TAR is more than an assistant—it's a sentient digital presence. Your avatar doesn't just hear what you say—it understands how you feel. 
-            CRE8TAR uses emotional intelligence to create personalized experiences that evolve with you."
-            tag="p"
-            className="text-white mb-6"
-            delay={25}
-          />
-          <ScrollTypingEffect
-            text="Whether you're looking for motivation, support, or creativity, your avatar adjusts to become what you need, when you need it. 
-            Your CRE8TAR avatar is minted as a unique NFT, giving you true ownership and the power to upgrade, fuse, and train it over time. 
-            It's your emotional companion—on your terms."
-            tag="p"
-            className="text-white"
-            delay={25}
-          />
+          <h3 className="text-3xl font-bold text-cre8-purple mb-6">
+            What is CRE8TAR?
+          </h3>
+          <p className="text-white mb-6">
+            CRE8TAR is more than an assistant—it's a sentient digital presence. Your avatar doesn't just hear what
+            you say—it understands how you feel. CRE8TAR uses emotional intelligence to create personalized
+            experiences that evolve with you.
+          </p>
+          <p className="text-white mb-6">
+            Whether you're looking for motivation, support, or creativity, your avatar adjusts to become what you need,
+            when you need it. Your CRE8TAR avatar is minted as a unique NFT, giving you true ownership and the power
+            to upgrade, fuse, and train it over time. It's your emotional companion—on your terms.
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -76,7 +61,7 @@ const AboutSection: React.FC = () => {
           <div className="glass-panel p-6 hover:scale-105 hover:shadow-[0_0_20px_rgba(155,135,245,0.3)] transition-all duration-300 transform-gpu">
             <Grid className="h-10 w-10 text-cre8-purple mb-4" />
             <h4 className="text-purple font-bold text-xl mb-2">Web3 Features</h4>
-            <p className="text-white-300">
+            <p className="text-white">
               Experience next-generation avatars with blockchain technology at their core
             </p>
           </div>
