@@ -14,19 +14,9 @@ const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 mb-10 lg:mb-0">
           <TypewriterEffect 
-  text="BLOCKCHAIN"
-  delay={30}
+  text="BLOCKCHAIN NFT AVATARS"
+  delay={70}
   className="text-white font-bold text-6xl sm:text-7xl tracking-wider mb-2 hover:text-gray-100 transition-colors"
-/>
-<TypewriterEffect 
-  text="NFT"
-  delay={30}
-  className="text-cre8-purple-light font-bold text-6xl sm:text-7xl tracking-wider mb-2 hover:text-cre8-purple transition-colors"
-/>
-<TypewriterEffect 
-  text="AVATARS"
-  delay={30}
-  className="text-cre8-purple-light font-bold text-6xl sm:text-7xl tracking-wider hover:text-cre8-purple transition-colors mb-8"
 />
 
          
