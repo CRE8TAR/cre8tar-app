@@ -40,7 +40,7 @@ const FeaturesSection: React.FC = () => {
     <section className="py-20 bg-[#05070F]" id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-doto font-extrabold gradient-text mb-4 text-[#f1f1f1]">
+          <h2 className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4">
             Web3 Features
           </h2>
           <p className="text-gray-300 font-doto">
