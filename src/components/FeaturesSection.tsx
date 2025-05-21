@@ -81,10 +81,11 @@ const UseCasesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <ScrollTypingEffect
-            text="WEB3 Applications"
+
+            text="Web3 Applications"
             tag="h2"
-            className="text-puple font-doto"
-            delay={40}
+            className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4"
+            delay={80}
           />
           <ScrollTypingEffect
             text="How CRE8TAR's on-chain avatars are transforming the blockchain ecosystem"
