@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface LogoProps {
@@ -7,13 +6,14 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ className = '' }) => {
   return (
-    <div className={`flex items-center ${className}`}>
+    <a href="/" className={`flex items-center cursor-pointer ${className}`}>
       <img 
-        src="/lovable-uploads/238074ca-61eb-42a7-9654-d67f5c296483.png" 
-        alt="CRE8TAR Logo" 
+        src="/Logo_C8.png" 
+        alt="CRE8TAR logo" 
         className="h-9 w-auto"
       />
-    </div>
+      <h3 className="ml-2 text-white font-bold text-xl">C8</h3>
+    </a>
   );
 };
 
