@@ -1,87 +1,148 @@
 import React, { useState } from 'react';
-import { CreditCard, Coins, Wallet, Vote } from 'lucide-react';
+import { Award, Palette, Globe, Users } from 'lucide-react';
 import Modal from './ui/modal';
+import ScrollTypingEffect from './ScrollTypingEffect';
 
-// Feature data with additional modal content
-const features = [
+const useCases = [
   {
-    icon: <CreditCard className="h-8 w-8 text-cre8-purple" />,
-    title: 'Avatar Minting',
-    description: 'Create your unique NFT avatar with emotional intelligence traits. Each mint is one of a kind, generating fully unique emotional NFTs secured on the blockchain.',
-    modalContent: `Avatar Minting is the genesis of your emotional AI identity within the CRE8TAR universe...` // shortened for brevity
+    icon: <Award className="h-8 w-8 text-cre8-purple" />,
+    title: 'NFT Collectors',
+    subtitle: 'Intelligent Digital Ownership',
+    description: 'Own unique emotionally intelligent avatars that increase in value over time while serving practical purposes across decentralized platforms.',
+    modalContent: `Own unique emotionally intelligent avatars that increase in value over time while serving practical purposes across decentralized platforms.
+
+Each avatar in the CRE8TAR ecosystem is designed with emotional intelligence traits and a digital soul that makes it more than just a collectible. These avatars can function as emotional companions, productivity enhancers, or metaverse personalities.
+
+With blockchain-backed verification and trait rarity encoded on-chain, your digital ownership is secured, immutable, and transparent. Over time, as your avatar interacts across platforms, it builds emotional metadata—enhancing both emotional richness and market value.
+
+NFT collectors now become emotional curators, choosing avatars that not only look rare, but feel unique. These assets evolve, gain lineage, and become part of your personal AI identity portfolio.`
   },
   {
-    icon: <Coins className="h-8 w-8 text-cre8-purple" />,
-    title: 'Avatar Fusion',
-    description: 'Combine two avatars to create a hybrid with enhanced emotional depth and rarity. Traits are inherited and evolved through our proprietary on-chain breeding mechanism.',
-    modalContent: `Avatar Fusion is an innovative feature that allows users to combine two existing CRE8TAR NFTs...`
+    icon: <Palette className="h-8 w-8 text-cre8-purple" />,
+    title: 'Web3 Creators',
+    subtitle: 'Blockchain-Backed Royalties',
+    description: 'Create and monetize emotional avatar assets with built-in royalty systems that automatically pay you for secondary market sales.',
+    modalContent: `As a Web3 Creator, you can build and monetize custom emotional avatar assets—expressive traits, digital personalities, or entire avatars.
+
+Through CRE8TAR's built-in royalty system, you earn passive income every time your creation is sold or resold. These royalties are automated and trustless, deployed through smart contracts with transparent tracking.
+
+Whether you're a visual artist, AI behavior designer, or sound engineer crafting avatar voices, your contributions become composable NFT assets.
+
+Your emotional creativity gains utility, and your digital work becomes a revenue stream within an expanding emotional AI economy.`
   },
   {
-    icon: <Wallet className="h-8 w-8 text-cre8-purple" />,
-    title: 'NFT Marketplace',
-    description: 'Trade and monetize your avatars through our cross-chain NFT marketplace with automated royalties. Integrated with L1X for secure ownership verification.',
-    modalContent: `The CRE8TAR NFT Marketplace is a cross-chain trading platform...`
+    icon: <Globe className="h-8 w-8 text-cre8-purple" />,
+    title: 'Metaverse Users',
+    subtitle: 'Cross-Platform Identity',
+    description: 'Your emotional avatar becomes your digital identity, usable across multiple metaverse environments with full ownership rights secured on-chain.',
+    modalContent: `Your CRE8TAR avatar is your emotional identity across the metaverse.
+
+These emotionally intelligent avatars are designed to integrate with multiple Web3 environments—games, VR spaces, productivity hubs, and more.
+
+Instead of fragmented profiles, you maintain a persistent emotional persona that expresses real-time moods, reactions, and preferences.
+
+On-chain ownership ensures no one else can replicate or misuse your avatar, and emotional traits persist as you transition between apps.
+
+Welcome to the future of identity—where you don't just log in… you emotionally arrive.`
   },
   {
-    icon: <Vote className="h-8 w-8 text-cre8-purple" />,
-    title: 'DAO Governance',
-    description: 'Participate in platform governance using your avatar NFT. Vote on treasury allocations, feature development, and ecosystem expansion through decentralized voting.',
-    modalContent: `CRE8TAR goes beyond user interaction—it invites users into decision-making and ecosystem evolution...`
+    icon: <Users className="h-8 w-8 text-cre8-purple" />,
+    title: 'DAO Communities',
+    subtitle: 'Governance & Participation',
+    description: "Use avatars as membership tokens with voting rights in the CRE8TAR ecosystem, allowing you to shape the platform's future development.",
+    modalContent: `Avatars in CRE8TAR double as governance tokens, giving you rights to propose, vote, and shape the direction of the platform.
+
+Each holder has a voice. Through weighted voting mechanisms, users with rare or high-engagement avatars can influence critical decisions like:
+
+• Feature prioritization
+• Treasury spending
+• New trait rollouts
+• Platform rules
+
+This transforms avatar ownership into a democratic tool an emotionally aware form of civic engagement for decentralized platforms.
+
+Join a community that not only feels but decides together.`
   }
 ];
 
-const FeaturesSection: React.FC = () => {
-  const [selectedFeature, setSelectedFeature] = useState<number | null>(null);
+const UseCasesSection: React.FC = () => {
+  const [selectedUseCase, setSelectedUseCase] = useState<number | null>(null);
 
-  const openModal = (index: number) => setSelectedFeature(index);
-  const closeModal = () => setSelectedFeature(null);
+  const openModal = (index: number) => {
+    setSelectedUseCase(index);
+  };
+
+  const closeModal = () => {
+    setSelectedUseCase(null);
+  };
 
   return (
-    <section className="py-20 bg-[#05070F]" id="features">
+    <section className="py-20 bg-[#07080F]" id="use-cases">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4">
+            Web3 Applications
+          </h2>
           <ScrollTypingEffect
-
-            text="Web3 Applications"
-            tag="h2"
-            className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4"
-            delay={80}
+            text="How CRE8TAR's on-chain avatars are transforming the blockchain ecosystem"
+            tag="p"
+            className="text-gray-300 font-doto"
+            delay={40}
           />
-          <p className="text-gray-300 font-doto">
-            Experience next-generation avatars with blockchain technology at their core
-          </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 gap-8">
-          {features.map((feature, index) => (
+          {useCases.map((useCase, index) => (
             <div 
               key={index} 
               className="bg-[#0D0F1A] rounded-xl p-8 border border-[#1A1D2E] hover:border-cre8-purple/50 hover:scale-105 hover:shadow-[0_0_30px_rgba(155,135,245,0.3)] transition-all duration-500 cursor-pointer transform-gpu hover:translate-y-[-5px]"
               onClick={() => openModal(index)}
             >
-              <div className="bg-[#15172A] p-4 inline-block rounded-lg mb-5">
-                {feature.icon}
+              <div className="mb-6">
+                {useCase.icon}
               </div>
-              <h3 className="text-2xl font-extrabold text-[#e0e0e0] mb-3">{feature.title}</h3>
-              <p className="text-white-300">{feature.description}</p>
+              <h3 className="text-2xl font-bold text-white mb-2">{useCase.title}</h3>
+              <h4 className="text-lg text-cre8-purple mb-3">{useCase.subtitle}</h4>
+              <p className="text-gray-300">{useCase.description}</p>
             </div>
           ))}
         </div>
 
-        {selectedFeature !== null && (
+        {/* Modal for detailed use case content */}
+        {selectedUseCase !== null && (
           <Modal 
-            isOpen={selectedFeature !== null}
+            isOpen={selectedUseCase !== null}
             onClose={closeModal}
-            title={features[selectedFeature].title}
+            title={useCases[selectedUseCase].title}
           >
             <div className="whitespace-pre-wrap">
-              {features[selectedFeature].modalContent}
+              {useCases[selectedUseCase].modalContent}
             </div>
           </Modal>
         )}
+
+        <div className="mt-16 text-center">
+          <h3 className="text-2xl md:text-3xl text-white font-bold mb-6">
+            Ready to Own Your Digital Future?
+          </h3>
+          <ScrollTypingEffect
+            text="Secure your unique emotional avatar NFT and join the next generation of digital ownership on the blockchain."
+            tag="p"
+            className="text-gray-300 mb-8 max-w-2xl mx-auto"
+            delay={30}
+          />
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-cre8-purple hover:bg-cre8-purple-dark text-white px-6 py-3 rounded-md font-medium transform hover:scale-105 transition-all duration-300">
+              Mint Your Avatar
+            </button>
+            <button className="border border-cre8-purple text-white hover:bg-cre8-purple/20 px-6 py-3 rounded-md font-medium transform hover:scale-105 transition-all duration-300">
+              Explore Marketplace
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default FeaturesSection;
+export default UseCasesSection;
