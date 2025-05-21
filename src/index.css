@@ -77,7 +77,7 @@
   
   /* Enhanced section heading styles */
   section h2 {
-    @apply font-extrabold text-[#F8F9F9] tracking-wide;
+    @apply font-extrabold text-[#ffffff] tracking-wide;
   }
   
   /* Enhanced card hover effects */
