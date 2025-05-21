@@ -14,21 +14,22 @@ const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 mb-10 lg:mb-0">
           <TypewriterEffect 
-          <h1 className="mb-6">
-            <div className="text-white font-bold text-6xl sm:text-7xl tracking-wider mb-2 hover:text-gray-100 transition-colors">
-              BLOCKCHAIN
-            </div>
-            <div className="text-cre8-purple-light font-bold text-6xl sm:text-7xl tracking-wider mb-2 hover:text-cre8-purple transition-colors">
-              NFT
-            </div>
-            <div className="text-cre8-purple-light font-bold text-6xl sm:text-7xl tracking-wider hover:text-cre8-purple transition-colors">
-              AVATARS
-            </div>
-          </h1>
-          delay={30}
-            className="font-doto text-gray-300 text-lg mb-8 max-w-lg"
-          />
-          
+  text="BLOCKCHAIN"
+  delay={30}
+  className="text-white font-bold text-6xl sm:text-7xl tracking-wider mb-2 hover:text-gray-100 transition-colors"
+/>
+<TypewriterEffect 
+  text="NFT"
+  delay={30}
+  className="text-cre8-purple-light font-bold text-6xl sm:text-7xl tracking-wider mb-2 hover:text-cre8-purple transition-colors"
+/>
+<TypewriterEffect 
+  text="AVATARS"
+  delay={30}
+  className="text-cre8-purple-light font-bold text-6xl sm:text-7xl tracking-wider hover:text-cre8-purple transition-colors mb-8"
+/>
+
+         
           <TypewriterEffect 
             text="Create, evolve, and trade emotional avatars secured on-chain. Digital companions with real ownership."
             delay={30}
