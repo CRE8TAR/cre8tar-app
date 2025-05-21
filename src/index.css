@@ -74,14 +74,10 @@
   .glass-panel {
     @apply bg-black/30 backdrop-blur-md border border-white/10 rounded-xl;
   }
-
-  .p{
-    @apply text-white;
-  }
   
   /* Enhanced section heading styles */
   section h2 {
-    @apply font-extrabold text-[#ffffff] tracking-wide;
+    @apply font-extrabold text-[#f1f1f1] tracking-wide;
   }
   
   /* Enhanced card hover effects */

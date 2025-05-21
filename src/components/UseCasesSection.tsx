@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Award, Palette, Globe, Users } from 'lucide-react';
 import Modal from './ui/modal';
-import ScrollTypingEffect from './ScrollTypingEffect';
 
 const useCases = [
   {
@@ -81,25 +80,19 @@ const UseCasesSection: React.FC = () => {
     <section className="py-20 bg-[#07080F]" id="use-cases">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <ScrollTypingEffect
-            text="Web3 Applications"
-            tag="h2"
-            className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4"
-            delay={80}
-          />
-          <ScrollTypingEffect
-            text="How CRE8TAR's on-chain avatars are transforming the blockchain ecosystem"
-            tag="p"
-            className="text-gray-300 font-doto"
-            delay={40}
-          />
+          <h2 className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4">
+            Web3 Applications
+          </h2>
+          <p className="text-gray-300 font-doto">
+            How CRE8TAR's on-chain avatars are transforming the blockchain ecosystem
+          </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
           {useCases.map((useCase, index) => (
             <div 
               key={index} 
-              className="bg-[#0D0F1A] rounded-xl p-8 border border-[#1A1D2E] hover:border-cre8-purple/50 hover:scale-105 hover:shadow-[0_0_30px_rgba(155,135,245,0.3)] transition-all duration-500 cursor-pointer transform-gpu hover:translate-y-[-5px]"
+              className="bg-[#0D0F1A] rounded-xl p-8 border border-[#1A1D2E] hover:border-cre8-purple/50 hover:scale-105 hover:shadow-lg hover:shadow-purple-900/30 transition-all duration-300 cursor-pointer"
               onClick={() => openModal(index)}
             >
               <div className="mb-6">
@@ -126,23 +119,17 @@ const UseCasesSection: React.FC = () => {
         )}
 
         <div className="mt-16 text-center">
-          <ScrollTypingEffect
-            text="Ready to Own Your Digital Future?"
-            tag="h3"
-            className="text-2xl md:text-3xl text-white font-bold mb-6"
-            delay={70}
-          />
-          <ScrollTypingEffect
-            text="Secure your unique emotional avatar NFT and join the next generation of digital ownership on the blockchain."
-            tag="p"
-            className="text-gray-300 mb-8 max-w-2xl mx-auto"
-            delay={30}
-          />
+          <h3 className="text-2xl md:text-3xl text-white font-bold mb-6">
+            Ready to Own Your Digital Future?
+          </h3>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Secure your unique emotional avatar NFT and join the next generation of digital ownership on the blockchain.
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-cre8-purple hover:bg-cre8-purple-dark text-white px-6 py-3 rounded-md font-medium transform hover:scale-105 transition-all duration-300">
+            <button className="bg-cre8-purple hover:bg-cre8-purple-dark text-white px-6 py-3 rounded-md font-medium">
               Mint Your Avatar
             </button>
-            <button className="border border-cre8-purple text-white hover:bg-cre8-purple/20 px-6 py-3 rounded-md font-medium transform hover:scale-105 transition-all duration-300">
+            <button className="border border-cre8-purple text-white hover:bg-cre8-purple/20 px-6 py-3 rounded-md font-medium">
               Explore Marketplace
             </button>
           </div>
