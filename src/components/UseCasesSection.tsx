@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Award, Palette, Globe, Users } from 'lucide-react';
 import Modal from './ui/modal';
@@ -81,12 +80,9 @@ const UseCasesSection: React.FC = () => {
     <section className="py-20 bg-[#07080F]" id="use-cases">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <ScrollTypingEffect
-            text="Web3 Applications"
-            tag="h2"
-            className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4"
-            delay={80}
-          />
+          <h2 className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4">
+            Web3 Applications
+          </h2>
           <ScrollTypingEffect
             text="How CRE8TAR's on-chain avatars are transforming the blockchain ecosystem"
             tag="p"
@@ -112,7 +108,6 @@ const UseCasesSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Modal for detailed use case content */}
         {selectedUseCase !== null && (
           <Modal 
             isOpen={selectedUseCase !== null}
@@ -126,12 +121,9 @@ const UseCasesSection: React.FC = () => {
         )}
 
         <div className="mt-16 text-center">
-          <ScrollTypingEffect
-            text="Ready to Own Your Digital Future?"
-            tag="h3"
-            className="text-2xl md:text-3xl text-white font-bold mb-6"
-            delay={70}
-          />
+          <h3 className="text-2xl md:text-3xl text-white font-bold mb-6">
+            Ready to Own Your Digital Future?
+          </h3>
           <ScrollTypingEffect
             text="Secure your unique emotional avatar NFT and join the next generation of digital ownership on the blockchain."
             tag="p"
