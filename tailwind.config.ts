@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,12 +19,24 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'silkscreen': ['Silkscreen', 'cursive'],
+				'doto': ['Doto', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				cre8: {
+					'bg-dark': '#05070F',
+					'purple': '#9b87f5',
+					'purple-light': '#D6BCFA',
+					'purple-dark': '#5D35D5',
+					'neon-pink': '#FF42A1',
+					'neon-blue': '#42C6FF'
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,11 +97,23 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%, 100%': { 
+						textShadow: '0 0 10px rgba(155, 135, 245, 0.8), 0 0 20px rgba(155, 135, 245, 0.4)'
+					},
+					'50%': { 
+						textShadow: '0 0 20px rgba(155, 135, 245, 1), 0 0 30px rgba(155, 135, 245, 0.8)' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 3s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'hero-gradient': 'linear-gradient(to right, rgba(66, 198, 255, 0.3), rgba(255, 66, 161, 0.3))'
 			}
 		}
 	},
