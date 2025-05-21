@@ -26,7 +26,7 @@ const TeaserSection: React.FC = () => {
               <PlayCircle className="h-20 w-20 text-cre8-purple opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300" />
             </div>
             
-            <h3 className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-2">
+            <h3 className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-6">
               Video Teaser Coming Soon
             </h3>
             <ScrollTypingEffect
