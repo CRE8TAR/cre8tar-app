@@ -80,10 +80,12 @@ const UseCasesSection: React.FC = () => {
     <section className="py-20 bg-[#07080F]" id="use-cases">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2>
-            Web3 Applications
-          </h2>
-          </div>
+          <ScrollTypingEffect
+            text="WEB3 Applications"
+            tag="h2"
+            className="text-puple font-doto"
+            delay={40}
+          />
           <ScrollTypingEffect
             text="How CRE8TAR's on-chain avatars are transforming the blockchain ecosystem"
             tag="p"
