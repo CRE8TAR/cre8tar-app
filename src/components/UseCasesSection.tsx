@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Award, Palette, Globe, Users } from 'lucide-react';
 import Modal from './ui/modal';
@@ -81,13 +82,11 @@ const UseCasesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <ScrollTypingEffect
-
             text="Web3 Applications"
             tag="h2"
             className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4"
             delay={80}
           />
-          
           <ScrollTypingEffect
             text="How CRE8TAR's on-chain avatars are transforming the blockchain ecosystem"
             tag="p"
@@ -95,7 +94,7 @@ const UseCasesSection: React.FC = () => {
             delay={40}
           />
         </div>
-
+        
         <div className="grid md:grid-cols-2 gap-8">
           {useCases.map((useCase, index) => (
             <div 
@@ -133,7 +132,6 @@ const UseCasesSection: React.FC = () => {
             className="text-2xl md:text-3xl text-white font-bold mb-6"
             delay={70}
           />
-          
           <ScrollTypingEffect
             text="Secure your unique emotional avatar NFT and join the next generation of digital ownership on the blockchain."
             tag="p"
