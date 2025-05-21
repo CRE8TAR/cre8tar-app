@@ -112,7 +112,7 @@ const FeaturesSection: React.FC = () => {
                 {feature.icon}
               </div>
               <h3 className="text-2xl font-extrabold text-[#e0e0e0] mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+              <p className="text-white-300">{feature.description}</p>
             </div>
           ))}
         </div>
