@@ -17,14 +17,14 @@ const HeroSection: React.FC = () => {
           <TypewriterEffect 
             text="BLOCKCHAIN NFT AVATARS"
             delay={90}
-            className="text-purple font-bold text-6xl sm:text-7xl tracking-wider mb-2 hover:text-gray-100 transition-colors"
+            className="text-purple font-bold text-6xl sm:text-7xl tracking-wider mb-2 "
           />
           </h1>
          
           <TypewriterEffect 
             text="Create, evolve, and trade emotional avatars secured on-chain. Digital companions with real ownership."
             delay={30}
-            className="font-doto text-white text-lg mb-8 max-w-lg"
+            className="font-doto text-gray-100 text-lg mb-8 max-w-lg"
           />
           
           <div className="flex flex-col sm:flex-row gap-4">
