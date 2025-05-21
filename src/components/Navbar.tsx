@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Logo from './Logo';
@@ -19,11 +18,7 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -41,7 +36,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <Logo />
           </div>
-          
+
           {/* Desktop menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-6">
@@ -49,26 +44,26 @@ const Navbar: React.FC = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="font-doto text-gray-300 hover:text-white px-2 py-1 text-sm transition-colors"
+                  className="font-doto text-white font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors"
                 >
                   {item.name}
                 </a>
               ))}
             </div>
           </div>
-          
+
           <div className="hidden md:block">
             <Button className="bg-transparent border border-cre8-purple hover:bg-cre8-purple/20 text-white flex items-center gap-2">
               <Wallet size={16} />
               Connect Wallet
             </Button>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-300 hover:text-white"
+              className="text-white hover:text-cre8-purple"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -88,7 +83,7 @@ const Navbar: React.FC = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="block font-doto text-gray-300 hover:text-white px-3 py-2 text-base"
+                className="block font-doto text-white font-bold hover:text-cre8-purple px-3 py-2 text-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
@@ -97,7 +92,7 @@ const Navbar: React.FC = () => {
             <Button 
               className="w-full mt-4 bg-transparent border border-cre8-purple hover:bg-cre8-purple/20 text-white flex items-center justify-center gap-2"
             >
-              <Wallet size={16} />
+              <Wallet size={20} />
               Connect Wallet
             </Button>
           </div>
