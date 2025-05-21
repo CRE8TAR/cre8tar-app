@@ -82,9 +82,9 @@ const UseCasesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
 
-         <h2 className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4">
-  Web3 Applications
-</h2>
+      <h2 className="text-4xl md:text-5xl font-doto font-extrabold gradient-text mb-4 text-[#f1f1f1]">
+            Web3 Features
+          </h2>
           <ScrollTypingEffect
             text="How CRE8TAR's on-chain avatars are transforming the blockchain ecosystem"
             tag="p"
