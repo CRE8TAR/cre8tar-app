@@ -29,7 +29,7 @@ const TypewriterEffect: React.FC<TypewriterEffectProps> = ({ text, delay = 50, c
   useEffect(() => {
     const cursorInterval = setInterval(() => {
       setShowCursor((current) => !current);
-    }, 500);
+    }, 150);
 
     return () => clearInterval(cursorInterval);
   }, []);
