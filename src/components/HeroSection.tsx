@@ -13,11 +13,13 @@ const HeroSection: React.FC = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 mb-10 lg:mb-0">
+          <h1 className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-6">
           <TypewriterEffect 
             text="BLOCKCHAIN NFT AVATARS"
             delay={90}
             className="text-purple font-bold text-6xl sm:text-7xl tracking-wider mb-2 hover:text-gray-100 transition-colors"
           />
+          </h1>
          
           <TypewriterEffect 
             text="Create, evolve, and trade emotional avatars secured on-chain. Digital companions with real ownership."
