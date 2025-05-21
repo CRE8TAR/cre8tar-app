@@ -25,7 +25,7 @@ const useCases = [
     icon: <Users className="h-8 w-8 text-cre8-purple" />,
     title: 'DAO Communities',
     subtitle: 'Governance & Participation',
-    description: 'Use avatars as membership tokens with voting rights in the CRE8TAR ecosystem, allowing you to shape the platform's future development.'
+    description: "Use avatars as membership tokens with voting rights in the CRE8TAR ecosystem, allowing you to shape the platform's future development."
   }
 ];
 
