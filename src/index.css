@@ -74,4 +74,14 @@
   .glass-panel {
     @apply bg-black/30 backdrop-blur-md border border-white/10 rounded-xl;
   }
+  
+  /* Enhanced section heading styles */
+  section h2 {
+    @apply font-extrabold text-[#f1f1f1] tracking-wide;
+  }
+  
+  /* Enhanced card hover effects */
+  .enhanced-card-hover {
+    @apply transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_20px_rgba(155,135,245,0.2)];
+  }
 }
