@@ -1,6 +1,8 @@
 
 import React from 'react';
 import Logo from './Logo';
+import { Twitter, Github, Linkedin, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -12,6 +14,20 @@ const Footer: React.FC = () => {
             <p className="text-gray-400 mb-4">
               The future of emotionally intelligent avatars begins here.
             </p>
+            <div className="flex space-x-4">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cre8-purple transition-colors">
+                <Twitter size={20} />
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cre8-purple transition-colors">
+                <Github size={20} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cre8-purple transition-colors">
+                <Linkedin size={20} />
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cre8-purple transition-colors">
+                <Instagram size={20} />
+              </a>
+            </div>
           </div>
           
           <div>
@@ -34,18 +50,18 @@ const Footer: React.FC = () => {
               <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">Documentation</a></li>
               <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">Token Info</a></li>
               <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">API Reference</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">Terms of Service</a></li>
+              <li><Link to="/privacy-policy" className="text-gray-400 hover:text-cre8-purple transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service" className="text-gray-400 hover:text-cre8-purple transition-colors">Terms of Service</Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Connect</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">Twitter</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">GitHub</a></li>
+              <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cre8-purple transition-colors">Twitter</a></li>
+              <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cre8-purple transition-colors">GitHub</a></li>
               <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">Website</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">Email</a></li>
+              <li><a href="mailto:info@cre8tar.com" className="text-gray-400 hover:text-cre8-purple transition-colors">Email</a></li>
             </ul>
           </div>
         </div>
@@ -56,12 +72,12 @@ const Footer: React.FC = () => {
               &copy; 2025 CRE8TAR. All rights reserved.
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors text-sm">
+              <Link to="/privacy-policy" className="text-gray-400 hover:text-cre8-purple transition-colors text-sm">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors text-sm">
+              </Link>
+              <Link to="/terms-of-service" className="text-gray-400 hover:text-cre8-purple transition-colors text-sm">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

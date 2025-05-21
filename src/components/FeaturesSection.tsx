@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { CreditCard, Coins, Wallet, Vote } from 'lucide-react';
 import Modal from './ui/modal';
@@ -98,7 +97,7 @@ const FeaturesSection: React.FC = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-[#0D0F1A] rounded-xl p-8 border border-[#1A1D2E] hover:border-cre8-purple/50 transition-all duration-300 cursor-pointer"
+              className="bg-[#0D0F1A] rounded-xl p-8 border border-[#1A1D2E] hover:border-cre8-purple/50 hover:scale-105 hover:shadow-lg hover:shadow-purple-900/30 transition-all duration-300 cursor-pointer"
               onClick={() => openModal(index)}
             >
               <div className="bg-[#15172A] p-4 inline-block rounded-lg mb-5">

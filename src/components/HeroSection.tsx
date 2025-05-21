@@ -13,13 +13,13 @@ const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 mb-10 lg:mb-0">
           <h1 className="mb-6">
-            <div className="text-white font-silkscreen text-6xl sm:text-7xl tracking-wider mb-2">
+            <div className="text-white font-bold text-6xl sm:text-7xl tracking-wider mb-2">
               BLOCKCHAIN
             </div>
-            <div className="text-cre8-purple-light font-silkscreen text-6xl sm:text-7xl tracking-wider mb-2">
+            <div className="text-cre8-purple-light font-bold text-6xl sm:text-7xl tracking-wider mb-2">
               NFT
             </div>
-            <div className="text-cre8-purple-light font-silkscreen text-6xl sm:text-7xl tracking-wider">
+            <div className="text-cre8-purple-light font-bold text-6xl sm:text-7xl tracking-wider">
               AVATARS
             </div>
           </h1>
