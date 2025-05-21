@@ -1,6 +1,4 @@
-
 import React from 'react';
-import ScrollTypingEffect from './ScrollTypingEffect';
 
 const steps = [
   {
@@ -40,20 +38,14 @@ const HowItWorksSection: React.FC = () => {
     <section className="py-20 bg-[#05070F]" id="how-it-works">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <ScrollTypingEffect
-            text="How It Works"
-            tag="h2"
-            className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4"
-            delay={80}
-          />
-          <ScrollTypingEffect
-            text="A Complete Workflow of Emotional Connection"
-            tag="p"
-            className="text-gray-300 font-doto"
-            delay={40}
-          />
+          <h2 className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4">
+            How It Works
+          </h2>
+          <p className="text-gray-300 font-doto">
+            A Complete Workflow of Emotional Connection
+          </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div 
