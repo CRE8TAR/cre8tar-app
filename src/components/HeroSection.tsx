@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
         <div className="lg:w-1/2 mb-10 lg:mb-0">
           <TypewriterEffect 
   text="BLOCKCHAIN NFT AVATARS"
-  delay={70}
+  delay={90}
   className="text-white font-bold text-6xl sm:text-7xl tracking-wider mb-2 hover:text-gray-100 transition-colors"
 />
 
