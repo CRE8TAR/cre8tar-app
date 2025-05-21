@@ -35,7 +35,7 @@ const AboutSection: React.FC = () => {
             text="CRE8TAR is more than an assistant—it's a sentient digital presence. Your avatar doesn't just hear what you say—it understands how you feel. 
             CRE8TAR uses emotional intelligence to create personalized experiences that evolve with you."
             tag="p"
-            className="text-white-300 mb-6"
+            className="text-white mb-6"
             delay={25}
           />
           <ScrollTypingEffect
@@ -51,7 +51,7 @@ const AboutSection: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="glass-panel p-6 hover:scale-105 hover:shadow-[0_0_20px_rgba(155,135,245,0.3)] transition-all duration-300 transform-gpu">
             <Shield className="h-10 w-10 text-cre8-purple mb-4" />
-            <h4 className="text-white font-bold text-xl mb-2">True Ownership</h4>
+            <h4 className="text-purple font-bold text-xl mb-2">True Ownership</h4>
             <p className="text-white">
               Your avatar is minted as an NFT, giving you full control and ownership
             </p>
@@ -59,7 +59,7 @@ const AboutSection: React.FC = () => {
 
           <div className="glass-panel p-6 hover:scale-105 hover:shadow-[0_0_20px_rgba(155,135,245,0.3)] transition-all duration-300 transform-gpu">
             <Brain className="h-10 w-10 text-cre8-purple mb-4" />
-            <h4 className="text-white font-bold text-xl mb-2">Emotional Intelligence</h4>
+            <h4 className="text-purple font-bold text-xl mb-2">Emotional Intelligence</h4>
             <p className="text-white">
               Understands your emotions and responds with empathy
             </p>
@@ -67,7 +67,7 @@ const AboutSection: React.FC = () => {
 
           <div className="glass-panel p-6 hover:scale-105 hover:shadow-[0_0_20px_rgba(155,135,245,0.3)] transition-all duration-300 transform-gpu">
             <Sparkles className="h-10 w-10 text-cre8-purple mb-4" />
-            <h4 className="text-white font-bold text-xl mb-2">Evolving Personality</h4>
+            <h4 className="text-purple font-bold text-xl mb-2">Evolving Personality</h4>
             <p className="text-white">
               Your avatar learns and evolves with every interaction
             </p>
@@ -75,7 +75,7 @@ const AboutSection: React.FC = () => {
 
           <div className="glass-panel p-6 hover:scale-105 hover:shadow-[0_0_20px_rgba(155,135,245,0.3)] transition-all duration-300 transform-gpu">
             <Grid className="h-10 w-10 text-cre8-purple mb-4" />
-            <h4 className="text-white font-bold text-xl mb-2">Web3 Features</h4>
+            <h4 className="text-purple font-bold text-xl mb-2">Web3 Features</h4>
             <p className="text-white-300">
               Experience next-generation avatars with blockchain technology at their core
             </p>
