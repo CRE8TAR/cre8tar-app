@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
           <TypewriterEffect 
             text="Create, evolve, and trade emotional avatars secured on-chain. Digital companions with real ownership."
             delay={30}
-            className="font-doto text-white text-lg mb-8 max-w-lg"
+            className="block font-doto text-white font-bold px-3 py-2 text-lg"
           />
           
           <div className="flex flex-col sm:flex-row gap-4">
