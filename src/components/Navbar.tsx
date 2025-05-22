@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
                 className="data-[state=checked]:bg-white"
               />
               <span className="text-white text-sm font-medium">
-                Reading Mode
+                
               </span>
             </div>
           </div>
@@ -123,7 +123,7 @@ const Navbar: React.FC = () => {
               className="w-full mt-4 bg-transparent border border-cre8-purple hover:bg-cre8-purple/20 text-white flex items-center justify-center gap-2"
             >
               <Wallet size={20} />
-              Connect Wallet
+              Wallet
             </Button>
           </div>
         </div>
