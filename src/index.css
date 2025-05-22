@@ -44,6 +44,36 @@
     --sidebar-border: 240 15% 20%;
     --sidebar-ring: 260 80% 74%;
   }
+  
+  .reading-mode {
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    --primary: 260 80% 50%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 3.9%;
+    
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
+    
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 10% 3.9%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 5% 84%;
+    --input: 240 5% 84%;
+    --ring: 260 80% 50%;
+  }
 }
 
 @layer base {
@@ -53,6 +83,10 @@
 
   body {
     @apply bg-cre8-bg-dark text-foreground font-doto;
+  }
+  
+  .reading-mode body {
+    @apply bg-white text-black;
   }
 
   .pixel-text {
@@ -74,9 +108,17 @@
   .glass-panel {
     @apply bg-black/30 backdrop-blur-md border border-white/10 rounded-xl;
   }
+  
+  .reading-mode .glass-panel {
+    @apply bg-white/90 border-gray-200 shadow-md;
+  }
 
   .p{
     @apply text-white;
+  }
+  
+  .reading-mode p {
+    @apply text-gray-800;
   }
   
   /* Enhanced section heading styles */
@@ -84,8 +126,24 @@
     @apply font-extrabold text-[#ffffff] tracking-wide;
   }
   
+  .reading-mode section h2 {
+    @apply text-gray-900;
+  }
+  
   /* Enhanced card hover effects */
   .enhanced-card-hover {
     @apply transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_20px_rgba(155,135,245,0.2)];
+  }
+  
+  .reading-mode .gradient-text {
+    @apply text-blue-800;
+  }
+  
+  .reading-mode nav {
+    @apply bg-white/80 border-b border-gray-200;
+  }
+  
+  .reading-mode section {
+    @apply bg-gray-50 !important;
   }
 }

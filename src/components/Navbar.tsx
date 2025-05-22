@@ -1,7 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import Logo from './Logo';
-import { Menu, X, Wallet } from 'lucide-react';
+import { Menu, X, Wallet, Sun, Moon } from 'lucide-react';
+import { Switch } from '@/components/ui/switch';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const navItems = [
   { name: 'Home', href: '#' },
@@ -15,6 +18,7 @@ const navItems = [
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { readingMode, toggleReadingMode } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,15 +56,41 @@ const Navbar: React.FC = () => {
             </div>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center space-x-4">
             <Button className="bg-transparent border border-cre8-purple hover:bg-cre8-purple/20 text-white flex items-center gap-2">
               <Wallet size={16} />
               Connect Wallet
             </Button>
+            
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/30 border border-white/10">
+              {readingMode ? 
+                <Sun size={18} className="text-black" /> : 
+                <Moon size={18} className="text-white" />
+              }
+              <Switch 
+                checked={readingMode} 
+                onCheckedChange={toggleReadingMode} 
+                className="data-[state=checked]:bg-white"
+              />
+              <span className="text-white text-sm font-medium">
+                Reading Mode
+              </span>
+            </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-3">
+            <div className="flex items-center">
+              {readingMode ? 
+                <Sun size={18} className="text-black" /> : 
+                <Moon size={18} className="text-white" />
+              }
+              <Switch 
+                checked={readingMode} 
+                onCheckedChange={toggleReadingMode} 
+                className="ml-1 data-[state=checked]:bg-white"
+              />
+            </div>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-white hover:text-cre8-purple"
