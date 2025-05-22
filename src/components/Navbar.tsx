@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Button className="bg-transparent border border-cre8-purple hover:bg-cre8-purple/20 text-white flex items-center gap-2">
               <Wallet size={16} />
-              Connect Wallet
+              Wallet
             </Button>
             
             <div className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/30 border border-white/10">
