@@ -1,4 +1,6 @@
+
 import React from 'react';
+import { useTheme } from '@/contexts/ThemeContext';
 
 const steps = [
   {
@@ -34,14 +36,16 @@ const steps = [
 ];
 
 const HowItWorksSection: React.FC = () => {
+  const { readingMode } = useTheme();
+  
   return (
-    <section className="py-20 bg-[#05070F]" id="how-it-works">
+    <section className={`py-20 ${readingMode ? 'bg-slate-50' : 'bg-[#05070F]'}`} id="how-it-works">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-doto font-bold gradient-text mb-4">
+          <h2 className={`text-4xl md:text-5xl font-doto font-bold ${readingMode ? '' : 'gradient-text'} mb-4`}>
             How It Works
           </h2>
-          <p className="text-gray-300 font-doto">
+          <p className={`${readingMode ? 'text-gray-600' : 'text-gray-300'} font-doto`}>
             A Complete Workflow of Emotional Connection
           </p>
         </div>
@@ -50,13 +54,13 @@ const HowItWorksSection: React.FC = () => {
           {steps.map((step, index) => (
             <div 
               key={index} 
-              className="glass-panel p-8 relative hover:shadow-[0_0_25px_rgba(155,135,245,0.2)] transition-all duration-500 hover:scale-105 transform-gpu"
+              className={`glass-panel p-8 relative hover:shadow-[0_0_25px_rgba(155,135,245,0.2)] transition-all duration-500 hover:scale-105 transform-gpu`}
             >
-              <div className="absolute -top-4 -left-4 bg-cre8-purple text-black font-silkscreen font-bold py-1 px-3 rounded-md">
+              <div className={`absolute -top-4 -left-4 ${readingMode ? 'bg-cre8-purple-dark' : 'bg-cre8-purple'} ${readingMode ? 'text-white' : 'text-black'} font-silkscreen font-bold py-1 px-3 rounded-md`}>
                 {step.number}
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3 mt-4">{step.title}</h3>
-              <p className="text-gray-300">{step.description}</p>
+              <h3 className={`text-2xl font-bold ${readingMode ? 'text-gray-800' : 'text-white'} mb-3 mt-4`}>{step.title}</h3>
+              <p className={`${readingMode ? 'text-gray-600' : 'text-gray-300'}`}>{step.description}</p>
             </div>
           ))}
         </div>

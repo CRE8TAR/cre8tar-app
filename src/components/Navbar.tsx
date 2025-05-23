@@ -13,14 +13,8 @@ const navItems = [
   { name: 'Marketplace', href: '#marketplace' },
   { name: 'Use Cases', href: '#use-cases' },
   { name: 'Stake & Governance', href: '#governance' },
-  { name: 'Early Access', href: '#early-access' }
-];
-
-const resourceItems = [
   { name: 'Whitepaper', href: '/whitepaper' },
-  { name: 'Documentation', href: '/documentation' },
-  { name: 'Token Info', href: '/token-info' },
-  { name: 'API Reference', href: '/api-reference' }
+  { name: 'Early Access', href: '#early-access' }
 ];
 
 const Navbar: React.FC = () => {
@@ -53,31 +47,24 @@ const Navbar: React.FC = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-6">
               {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="font-doto text-white font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors"
-                >
-                  {item.name}
-                </a>
+                item.href.startsWith('/') ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="font-doto text-white font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="font-doto text-white font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
-              
-              <div className="relative group">
-                <button className="font-doto text-white font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors flex items-center">
-                  Resources
-                </button>
-                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-black/90 backdrop-blur-lg ring-1 ring-black ring-opacity-5 py-1 hidden group-hover:block">
-                  {resourceItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-cre8-purple"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
 
@@ -97,7 +84,7 @@ const Navbar: React.FC = () => {
                 onCheckedChange={toggleReadingMode} 
                 className="data-[state=checked]:bg-white"
               />
-              <span className="text-white text-sm font-medium">
+              <span className={`text-sm font-medium ${readingMode ? "text-black" : "text-white"}`}>
                 {readingMode ? "Reading" : "Dark"}
               </span>
             </div>
@@ -135,19 +122,7 @@ const Navbar: React.FC = () => {
         <div className="md:hidden bg-black/95 backdrop-blur-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="block font-doto text-white font-bold hover:text-cre8-purple px-3 py-2 text-lg"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-            
-            <div className="pt-2 pb-1">
-              <p className="px-3 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">Resources</p>
-              {resourceItems.map((item) => (
+              item.href.startsWith('/') ? (
                 <Link
                   key={item.name}
                   to={item.href}
@@ -156,8 +131,17 @@ const Navbar: React.FC = () => {
                 >
                   {item.name}
                 </Link>
-              ))}
-            </div>
+              ) : (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="block font-doto text-white font-bold hover:text-cre8-purple px-3 py-2 text-lg"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              )
+            ))}
             
             <Button 
               className="w-full mt-4 bg-transparent border border-cre8-purple hover:bg-cre8-purple/20 text-white flex items-center justify-center gap-2"

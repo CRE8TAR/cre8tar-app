@@ -46,7 +46,7 @@
   }
   
   .reading-mode {
-    --background: 220 14% 96%;
+    --background: 0 0% 97%;
     --foreground: 240 10% 3.9%;
     
     --card: 0 0% 100%;
@@ -100,6 +100,10 @@
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-cre8-neon-blue to-cre8-neon-pink;
   }
+
+  .reading-mode .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gray-700 to-gray-900;
+  }
   
   .neon-border {
     @apply border-2 border-cre8-purple shadow-[0_0_10px_rgba(155,135,245,0.5)];
@@ -136,7 +140,7 @@
   }
   
   .reading-mode .gradient-text {
-    @apply text-gray-900 bg-gradient-to-r from-cre8-purple-dark to-cre8-purple;
+    @apply text-transparent bg-gradient-to-r from-gray-700 to-gray-900;
   }
   
   /* Light mode navbar */
@@ -156,7 +160,7 @@
   
   /* Footer in light mode */
   .reading-mode footer {
-    @apply bg-slate-800 text-white;
+    @apply bg-slate-100 text-gray-800;
   }
   
   /* Card hover effects */
@@ -174,8 +178,8 @@
   }
   
   /* Fix for the TypewriterEffect in reading mode */
-  .reading-mode .gradient-text TypewriterEffect,
-  .reading-mode TypewriterEffect {
+  .reading-mode .TypewriterEffect,
+  .reading-mode [class*="TypewriterEffect"] {
     @apply text-gray-800;
   }
   
@@ -204,6 +208,33 @@
   /* Fix for the ScrollTypingEffect component */
   .reading-mode .ScrollTypingEffect,
   .reading-mode [class*="ScrollTypingEffect"] {
+    @apply text-gray-800;
+  }
+
+  /* Update footer in light mode */
+  .reading-mode footer {
+    @apply bg-gray-100;
+  }
+
+  .reading-mode footer .text-gray-400 {
+    @apply text-gray-600;
+  }
+
+  .reading-mode footer h3.text-white {
+    @apply text-gray-800;
+  }
+
+  /* Button styling in light mode */
+  .reading-mode .bg-cre8-purple {
+    @apply bg-cre8-purple-dark text-white;
+  }
+
+  .reading-mode .border-cre8-purple {
+    @apply border-cre8-purple-dark;
+  }
+
+  /* Fix HeroSection TypewriterEffect in light mode */
+  .reading-mode section:first-of-type .text-white {
     @apply text-gray-800;
   }
 }
