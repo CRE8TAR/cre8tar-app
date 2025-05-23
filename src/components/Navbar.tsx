@@ -13,7 +13,6 @@ const navItems = [
   { name: 'Marketplace', href: '#marketplace' },
   { name: 'Use Cases', href: '#use-cases' },
   { name: 'Stake & Governance', href: '#governance' },
-  { name: 'Whitepaper', href: '/whitepaper' },
   { name: 'Early Access', href: '#early-access' }
 ];
 
