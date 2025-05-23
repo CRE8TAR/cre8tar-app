@@ -118,7 +118,8 @@
   }
 
   p {
-    @apply text-white font-bold text-[17px];
+    @apply text-[17px] font-bold;
+    color: white;
   }
   
   .reading-mode p {
@@ -127,7 +128,8 @@
   
   /* Enhanced section heading styles */
   section h2 {
-    @apply font-extrabold text-[#ffffff] tracking-wide;
+    @apply font-extrabold tracking-wide;
+    color: #ffffff;
   }
   
   .reading-mode section h2 {
@@ -160,7 +162,8 @@
   
   /* Footer in light mode */
   .reading-mode footer {
-    @apply bg-slate-100 text-gray-800;
+    @apply bg-slate-100;
+    color: #1f2937;
   }
   
   /* Card hover effects */
@@ -220,13 +223,14 @@
     @apply text-gray-600;
   }
 
-  .reading-mode footer h3.text-white {
-    @apply text-gray-800;
+  .reading-mode footer h3 {
+    color: #1f2937;
   }
 
   /* Button styling in light mode */
   .reading-mode .bg-cre8-purple {
-    @apply bg-cre8-purple-dark text-white;
+    @apply bg-cre8-purple-dark;
+    color: white;
   }
 
   .reading-mode .border-cre8-purple {

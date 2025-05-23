@@ -45,7 +45,7 @@ const HowItWorksSection: React.FC = () => {
           <h2 className={`text-4xl md:text-5xl font-doto font-bold ${readingMode ? '' : 'gradient-text'} mb-4`}>
             How It Works
           </h2>
-          <p className={`${readingMode ? 'text-gray-600' : 'text-gray-300'} font-doto`}>
+          <p className={`${readingMode ? 'text-gray-600' : ''} font-doto`}>
             A Complete Workflow of Emotional Connection
           </p>
         </div>
@@ -59,8 +59,8 @@ const HowItWorksSection: React.FC = () => {
               <div className={`absolute -top-4 -left-4 ${readingMode ? 'bg-cre8-purple-dark' : 'bg-cre8-purple'} ${readingMode ? 'text-white' : 'text-black'} font-silkscreen font-bold py-1 px-3 rounded-md`}>
                 {step.number}
               </div>
-              <h3 className={`text-2xl font-bold ${readingMode ? 'text-gray-800' : 'text-white'} mb-3 mt-4`}>{step.title}</h3>
-              <p className={`${readingMode ? 'text-gray-600' : 'text-gray-300'}`}>{step.description}</p>
+              <h3 className={`text-2xl font-bold ${readingMode ? 'text-gray-800' : ''} mb-3 mt-4`}>{step.title}</h3>
+              <p className={`${readingMode ? 'text-gray-600' : ''}`}>{step.description}</p>
             </div>
           ))}
         </div>
