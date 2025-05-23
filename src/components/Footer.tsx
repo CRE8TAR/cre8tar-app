@@ -46,10 +46,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Resources</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">Whitepaper</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">Documentation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">Token Info</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-cre8-purple transition-colors">API Reference</a></li>
+              <li><Link to="/whitepaper" className="text-gray-400 hover:text-cre8-purple transition-colors">Whitepaper</Link></li>
+              <li><Link to="/documentation" className="text-gray-400 hover:text-cre8-purple transition-colors">Documentation</Link></li>
+              <li><Link to="/token-info" className="text-gray-400 hover:text-cre8-purple transition-colors">Token Info</Link></li>
+              <li><Link to="/api-reference" className="text-gray-400 hover:text-cre8-purple transition-colors">API Reference</Link></li>
               <li><Link to="/privacy-policy" className="text-gray-400 hover:text-cre8-purple transition-colors">Privacy Policy</Link></li>
               <li><Link to="/terms-of-service" className="text-gray-400 hover:text-cre8-purple transition-colors">Terms of Service</Link></li>
             </ul>

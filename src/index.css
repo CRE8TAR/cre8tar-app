@@ -46,7 +46,7 @@
   }
   
   .reading-mode {
-    --background: 0 0% 98%;
+    --background: 220 14% 96%;
     --foreground: 240 10% 3.9%;
     
     --card: 0 0% 100%;
@@ -58,20 +58,20 @@
     --primary: 260 80% 50%;
     --primary-foreground: 0 0% 98%;
     
-    --secondary: 240 5% 96%;
+    --secondary: 220 14% 90%;
     --secondary-foreground: 240 10% 3.9%;
     
-    --muted: 240 5% 96%;
+    --muted: 220 14% 90%;
     --muted-foreground: 240 3.8% 46.1%;
     
-    --accent: 240 5% 96%;
+    --accent: 220 14% 85%;
     --accent-foreground: 240 10% 3.9%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 240 5% 84%;
-    --input: 240 5% 84%;
+    --border: 220 13% 75%;
+    --input: 220 13% 75%;
     --ring: 260 80% 50%;
   }
 }
@@ -86,7 +86,7 @@
   }
   
   .reading-mode body {
-    @apply bg-white text-black;
+    @apply bg-slate-100 text-gray-900;
   }
 
   .pixel-text {
@@ -110,15 +110,15 @@
   }
   
   .reading-mode .glass-panel {
-    @apply bg-white/90 border-gray-200 shadow-md;
+    @apply bg-white border border-gray-200 shadow-md;
   }
 
-  .p{
-    @apply text-white;
+  p {
+    @apply text-white font-bold text-[17px];
   }
   
   .reading-mode p {
-    @apply text-gray-800;
+    @apply text-gray-800 font-bold text-[17px];
   }
   
   /* Enhanced section heading styles */
@@ -136,14 +136,40 @@
   }
   
   .reading-mode .gradient-text {
-    @apply text-blue-800;
+    @apply text-gray-900 bg-gradient-to-r from-cre8-purple-dark to-cre8-purple;
   }
   
+  /* Light mode navbar */
   .reading-mode nav {
-    @apply bg-white/80 border-b border-gray-200;
+    @apply bg-white/80 backdrop-blur-lg border-b border-gray-200;
   }
   
+  /* Light mode sections */
   .reading-mode section {
-    @apply bg-gray-50 !important;
+    @apply bg-gradient-to-b from-slate-50 to-slate-100;
+  }
+
+  /* Hero section in light mode */
+  .reading-mode section:first-of-type .absolute.inset-0 {
+    @apply bg-gradient-to-r from-slate-100 to-slate-200;
+  }
+  
+  /* Footer in light mode */
+  .reading-mode footer {
+    @apply bg-slate-800 text-white;
+  }
+  
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-[1.03] hover:shadow-lg;
+  }
+  
+  .reading-mode .card-hover {
+    @apply hover:shadow-xl hover:shadow-slate-200/50;
+  }
+  
+  /* Text in nav for light mode */
+  .reading-mode nav a {
+    @apply text-gray-800;
   }
 }
