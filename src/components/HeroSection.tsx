@@ -17,22 +17,22 @@ const HeroSection: React.FC = () => {
           <TypewriterEffect 
             text="BLOCKCHAIN NFT AVATARS"
             delay={90}
-            className="text-purple font-bold text-6xl sm:text-7xl tracking-wider mb-2 "
+            className="text-purple font-bold text-6xl sm:text-7xl tracking-wider mb-2"
           />
           </h1>
          
           <TypewriterEffect 
             text="Create, evolve, and trade emotional avatars secured on-chain. Digital companions with real ownership."
             delay={30}
-            className="font-doto text-white font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors"
+            className="font-doto text-white dark:text-white reading-mode:text-gray-800 font-bold hover:text-cre8-purple reading-mode:hover:text-cre8-purple-dark px-2 py-1 text-base transition-colors"
           />
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Button className="bg-cre8-purple hover:bg-cre8-purple-dark text-white font-medium px-8 py-6 rounded-md flex items-center gap-2 transition-all duration-300">
               <Wallet size={18} />
               Connect Wallet
             </Button>
-            <Button variant="outline" className="border-cre8-purple text-white hover:bg-cre8-purple/20 font-medium px-8 py-6 rounded-md flex items-center gap-2 transition-all duration-300">
+            <Button variant="outline" className="border-cre8-purple text-white hover:bg-cre8-purple/20 reading-mode:text-gray-800 reading-mode:hover:text-white font-medium px-8 py-6 rounded-md flex items-center gap-2 transition-all duration-300">
               <Link2 size={18} />
               Explore NFTs
             </Button>

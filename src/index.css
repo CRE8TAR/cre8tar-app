@@ -172,4 +172,38 @@
   .reading-mode nav a {
     @apply text-gray-800;
   }
+  
+  /* Fix for the TypewriterEffect in reading mode */
+  .reading-mode .gradient-text TypewriterEffect,
+  .reading-mode TypewriterEffect {
+    @apply text-gray-800;
+  }
+  
+  /* Ensuring all text elements in reading mode have dark text */
+  .reading-mode h1, 
+  .reading-mode h2, 
+  .reading-mode h3, 
+  .reading-mode h4, 
+  .reading-mode h5, 
+  .reading-mode h6,
+  .reading-mode span,
+  .reading-mode div {
+    @apply text-gray-800;
+  }
+  
+  /* Make sure code blocks and pre elements are readable in light mode */
+  .reading-mode pre, 
+  .reading-mode code {
+    @apply bg-gray-100 text-gray-800;
+  }
+  
+  .reading-mode pre code {
+    @apply text-gray-800;
+  }
+  
+  /* Fix for the ScrollTypingEffect component */
+  .reading-mode .ScrollTypingEffect,
+  .reading-mode [class*="ScrollTypingEffect"] {
+    @apply text-gray-800;
+  }
 }
