@@ -84,7 +84,7 @@ const Navbar: React.FC = () => {
                 className="data-[state=checked]:bg-white"
               />
               <span className={`text-sm font-medium ${readingMode ? "text-black" : "text-white"}`}>
-                {readingMode ? "Reading" : "Dark"}
+                {readingMode ? "" : ""}
               </span>
             </div>
           </div>
