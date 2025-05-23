@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -223,7 +222,7 @@ const ApiReference: React.FC = () => {
                     const socket = new WebSocket('wss://api.cre8tar.com/v1/events');
                     
                     // Authentication
-                    socket.onopen = () => {"{"}
+                    socket.onopen = () {"{"}
                       socket.send(JSON.stringify({"{"}
                         type: 'auth',
                         token: 'YOUR_TOKEN'
@@ -238,7 +237,7 @@ const ApiReference: React.FC = () => {
                     {"}"}));
                     
                     // Event handling
-                    socket.onmessage = (event) => {"{"}
+                    socket.onmessage = (event) {"{"}
                       const data = JSON.parse(event.data);
                       console.log('Event received:', data);
                     {"}"};
