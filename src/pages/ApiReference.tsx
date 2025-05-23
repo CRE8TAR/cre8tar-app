@@ -223,25 +223,25 @@ const ApiReference: React.FC = () => {
                     const socket = new WebSocket('wss://api.cre8tar.com/v1/events');
                     
                     // Authentication
-                    socket.onopen = () => {'{'}
-                      socket.send(JSON.stringify({'{'}
+                    socket.onopen = () => {"{"}
+                      socket.send(JSON.stringify({"{"}
                         type: 'auth',
                         token: 'YOUR_TOKEN'
-                      {'}'}));
-                    {'}'};
+                      {"}"}));
+                    {"}"};
                     
                     // Subscribe to avatar events
-                    socket.send(JSON.stringify({'{'}
+                    socket.send(JSON.stringify({"{"}
                       type: 'subscribe',
                       channel: 'avatar',
                       avatar_id: 'avatar_123456'
-                    {'}'}));
+                    {"}"}));
                     
                     // Event handling
-                    socket.onmessage = (event) => {'{'}
+                    socket.onmessage = (event) => {"{"}
                       const data = JSON.parse(event.data);
                       console.log('Event received:', data);
-                    {'}'};
+                    {"}"};
                   </code>
                 </pre>
               </div>
