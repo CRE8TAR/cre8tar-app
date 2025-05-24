@@ -73,7 +73,7 @@ const FAQSection: React.FC = () => {
             {faqData.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className={`border-b ${readingMode ? 'border-gray-400' : 'border-[#1A1D2E]'}`}>
                 <AccordionTrigger className={`text-left ${readingMode ? 'text-black font-black hover:text-cre8-purple' : 'text-white hover:text-cre8-purple'} text-lg font-bold`}>
-                  > {faq.question}
+                  {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className={`${readingMode ? 'text-black font-black' : 'text-gray-300'} text-base leading-relaxed whitespace-pre-line`}>
                   {faq.answer}
