@@ -46,32 +46,32 @@
   }
   
   .reading-mode {
-    --background: 0 0% 97%;
-    --foreground: 240 10% 3.9%;
+    --background: 220 20% 92%;
+    --foreground: 0 0% 0%;
     
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 220 20% 90%;
+    --card-foreground: 0 0% 0%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 220 20% 90%;
+    --popover-foreground: 0 0% 0%;
     
     --primary: 260 80% 50%;
     --primary-foreground: 0 0% 98%;
     
-    --secondary: 220 14% 90%;
-    --secondary-foreground: 240 10% 3.9%;
+    --secondary: 220 20% 85%;
+    --secondary-foreground: 0 0% 0%;
     
-    --muted: 220 14% 90%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 220 20% 85%;
+    --muted-foreground: 0 0% 15%;
     
-    --accent: 220 14% 85%;
-    --accent-foreground: 240 10% 3.9%;
+    --accent: 220 20% 80%;
+    --accent-foreground: 0 0% 0%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 220 13% 75%;
-    --input: 220 13% 75%;
+    --border: 220 20% 75%;
+    --input: 220 20% 75%;
     --ring: 260 80% 50%;
   }
 }
@@ -86,7 +86,9 @@
   }
   
   .reading-mode body {
-    @apply bg-white text-gray-900 font-semibold;
+    background-color: #e8e8e8;
+    color: #000000;
+    font-weight: 700;
   }
 
   .pixel-text {
@@ -114,26 +116,33 @@
   }
   
   .reading-mode .glass-panel {
-    @apply bg-gradient-to-b from-gray-100 to-gray-200 border border-gray-300 shadow-md;
+    background-color: #d5d5d5;
+    border: 1px solid #999999;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 
   p {
-    @apply text-[17px] font-bold;
     color: white;
+    font-size: 17px;
+    font-weight: 700;
   }
   
   .reading-mode p {
-    @apply text-gray-800 font-bold text-[17px];
+    color: #000000;
+    font-weight: 900;
+    font-size: 17px;
   }
   
   /* Enhanced section heading styles */
   section h2 {
-    @apply font-extrabold tracking-wide;
+    font-weight: 800;
+    letter-spacing: 0.05em;
     color: #ffffff;
   }
   
   .reading-mode section h2 {
-    @apply text-gray-900 font-extrabold;
+    color: #000000;
+    font-weight: 900;
   }
   
   /* Enhanced card hover effects */
@@ -143,22 +152,24 @@
   
   /* Light mode navbar */
   .reading-mode nav {
-    @apply bg-white/90 backdrop-blur-lg border-b border-gray-200;
+    background-color: #d5d5d5;
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid #999999;
   }
   
   /* Light mode sections */
   .reading-mode section {
-    @apply bg-gradient-to-b from-white to-gray-50;
+    background: linear-gradient(to bottom, #e8e8e8, #d5d5d5);
   }
 
   /* Hero section in light mode */
   .reading-mode section:first-of-type .absolute.inset-0 {
-    @apply bg-gradient-to-r from-gray-100 to-gray-200;
+    background: linear-gradient(to right, #e8e8e8, #d5d5d5);
   }
   
   /* Footer in light mode */
   .reading-mode footer {
-    @apply bg-gray-100;
+    background-color: #d5d5d5;
   }
   
   /* Card hover effects */
@@ -167,18 +178,20 @@
   }
   
   .reading-mode .card-hover {
-    @apply hover:shadow-xl hover:shadow-gray-300/50;
+    @apply hover:shadow-xl hover:shadow-gray-400/60;
   }
   
   /* Text in nav for light mode */
   .reading-mode nav a {
-    @apply text-gray-800 font-semibold;
+    color: #000000;
+    font-weight: 900;
   }
   
   /* Fix for the TypewriterEffect in reading mode */
   .reading-mode .TypewriterEffect,
   .reading-mode [class*="TypewriterEffect"] {
-    @apply text-gray-800 font-semibold;
+    color: #000000;
+    font-weight: 900;
   }
   
   /* Ensuring all text elements in reading mode have dark text */
@@ -189,24 +202,30 @@
   .reading-mode h5, 
   .reading-mode h6,
   .reading-mode span,
-  .reading-mode div {
-    @apply text-gray-800 font-semibold;
+  .reading-mode div,
+  .reading-mode label {
+    color: #000000;
+    font-weight: 900;
   }
   
   /* Make sure code blocks and pre elements are readable in light mode */
   .reading-mode pre, 
   .reading-mode code {
-    @apply bg-gray-100 text-gray-800 font-semibold;
+    background-color: #d5d5d5;
+    color: #000000;
+    font-weight: 900;
   }
   
   .reading-mode pre code {
-    @apply text-gray-800 font-semibold;
+    color: #000000;
+    font-weight: 900;
   }
   
   /* Fix for the ScrollTypingEffect component */
   .reading-mode .ScrollTypingEffect,
   .reading-mode [class*="ScrollTypingEffect"] {
-    @apply text-gray-800 font-semibold;
+    color: #000000;
+    font-weight: 900;
   }
 
   /* Button styling in light mode */
@@ -221,17 +240,19 @@
 
   /* Fix HeroSection TypewriterEffect in light mode */
   .reading-mode section:first-of-type {
-    color: #1f2937;
-    font-weight: 600;
+    color: #000000;
+    font-weight: 900;
   }
   
   /* Silver theme for light mode cards */
   .reading-mode .silver-card {
-    @apply bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 border border-gray-400 shadow-lg;
+    background: linear-gradient(to bottom, #d5d5d5, #c0c0c0, #b5b5b5);
+    border: 1px solid #999999;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   }
   
   /* Enhanced silver styling for light mode */
   .reading-mode .silver-gradient {
-    @apply bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300;
+    background: linear-gradient(to right, #d0d0d0, #e8e8e8, #d0d0d0);
   }
 }

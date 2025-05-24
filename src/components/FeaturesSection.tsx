@@ -40,13 +40,13 @@ const FeaturesSection: React.FC = () => {
   const closeModal = () => setSelectedFeature(null);
 
   return (
-    <section className={`py-20 ${readingMode ? 'bg-white' : 'bg-[#05070F]'}`} id="features">
+    <section className={`py-20 ${readingMode ? 'bg-gradient-to-b from-gray-200 to-gray-300' : 'bg-[#05070F]'}`} id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className={`text-4xl md:text-5xl font-doto font-bold ${readingMode ? '' : 'gradient-text'} mb-4`}>
+          <h2 className={`text-4xl md:text-5xl font-doto font-bold ${readingMode ? 'text-black font-black' : 'gradient-text'} mb-4`}>
             Web3 Features
           </h2>
-          <p className={`${readingMode ? 'text-gray-600' : 'text-gray-300'} font-doto`}>
+          <p className={`${readingMode ? 'text-black font-black' : 'text-gray-300'} font-doto`}>
             Experience next-generation avatars with blockchain technology at their core
           </p>
         </div>
@@ -55,14 +55,21 @@ const FeaturesSection: React.FC = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className={`${readingMode ? 'bg-gray-50 border-gray-200' : 'bg-[#0D0F1A] border-[#1A1D2E]'} rounded-xl p-8 border hover:border-cre8-purple/50 hover:scale-105 hover:shadow-[0_0_30px_rgba(155,135,245,0.3)] transition-all duration-500 cursor-pointer transform-gpu hover:translate-y-[-5px]`}
+              className={`${readingMode 
+                ? 'bg-gradient-to-b from-gray-300 via-gray-200 to-gray-400 border-gray-500 shadow-lg' 
+                : 'bg-[#0D0F1A] border-[#1A1D2E]'} 
+                rounded-xl p-8 border hover:border-cre8-purple/50 hover:scale-105 
+                ${readingMode 
+                  ? 'hover:shadow-xl hover:shadow-gray-500/80' 
+                  : 'hover:shadow-[0_0_30px_rgba(155,135,245,0.3)]'} 
+                transition-all duration-500 cursor-pointer transform-gpu hover:translate-y-[-5px]`}
               onClick={() => openModal(index)}
             >
-              <div className={`${readingMode ? 'bg-slate-100' : 'bg-[#15172A]'} p-4 inline-block rounded-lg mb-5`}>
+              <div className={`${readingMode ? 'bg-gray-400' : 'bg-[#15172A]'} p-4 inline-block rounded-lg mb-5`}>
                 {feature.icon}
               </div>
-              <h3 className={`text-2xl font-extrabold ${readingMode ? 'text-gray-800' : 'text-[#e0e0e0]'} mb-3`}>{feature.title}</h3>
-              <p className={`${readingMode ? 'text-gray-600' : 'text-white-300'}`}>{feature.description}</p>
+              <h3 className={`text-2xl font-extrabold ${readingMode ? 'text-black font-black' : 'text-[#e0e0e0]'} mb-3`}>{feature.title}</h3>
+              <p className={`${readingMode ? 'text-black font-black' : 'text-white-300'}`}>{feature.description}</p>
             </div>
           ))}
         </div>

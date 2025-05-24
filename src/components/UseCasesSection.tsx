@@ -80,16 +80,16 @@ const UseCasesSection: React.FC = () => {
   };
 
   return (
-    <section className={`py-20 ${readingMode ? 'bg-slate-50' : 'bg-[#07080F]'}`} id="use-cases">
+    <section className={`py-20 ${readingMode ? 'bg-gradient-to-b from-gray-200 to-gray-300' : 'bg-[#07080F]'}`} id="use-cases">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className={`text-4xl md:text-5xl font-doto font-bold ${readingMode ? '' : 'gradient-text'} mb-4`}>
+          <h2 className={`text-4xl md:text-5xl font-doto font-bold ${readingMode ? 'text-black font-black' : 'gradient-text'} mb-4`}>
             Web3 Applications
           </h2>
           <ScrollTypingEffect
             text="How CRE8TAR's on-chain avatars are transforming the blockchain ecosystem"
             tag="p"
-            className={`${readingMode ? 'text-gray-700' : 'text-gray-300'} font-doto`}
+            className={`${readingMode ? 'text-black font-black' : 'text-gray-300'} font-doto`}
             delay={40}
           />
         </div>
@@ -99,21 +99,21 @@ const UseCasesSection: React.FC = () => {
             <div 
               key={index} 
               className={`${readingMode 
-                ? 'bg-gradient-to-b from-gray-100 to-gray-200 border-gray-300 shadow-lg' 
+                ? 'bg-gradient-to-b from-gray-300 via-gray-200 to-gray-400 border-gray-500 shadow-lg' 
                 : 'bg-[#0D0F1A] border-[#1A1D2E]'} 
                 rounded-xl p-8 border hover:border-cre8-purple/50 hover:scale-105 
                 ${readingMode 
-                  ? 'hover:shadow-xl hover:shadow-gray-300/80' 
+                  ? 'hover:shadow-xl hover:shadow-gray-500/80' 
                   : 'hover:shadow-[0_0_30px_rgba(155,135,245,0.3)]'} 
                 transition-all duration-500 cursor-pointer transform-gpu hover:translate-y-[-5px]`}
               onClick={() => openModal(index)}
             >
-              <div className={`mb-6 ${readingMode ? 'bg-gray-200 p-3 rounded-full inline-block' : ''}`}>
+              <div className={`mb-6 ${readingMode ? 'bg-gray-400 p-3 rounded-full inline-block' : ''}`}>
                 {useCase.icon}
               </div>
-              <h3 className={`text-2xl font-bold ${readingMode ? 'text-gray-800' : 'text-white'} mb-2`}>{useCase.title}</h3>
+              <h3 className={`text-2xl font-bold ${readingMode ? 'text-black font-black' : 'text-white'} mb-2`}>{useCase.title}</h3>
               <h4 className="text-lg text-cre8-purple mb-3">{useCase.subtitle}</h4>
-              <p className={`${readingMode ? 'text-gray-700' : 'text-gray-300'}`}>{useCase.description}</p>
+              <p className={`${readingMode ? 'text-black font-black' : 'text-gray-300'}`}>{useCase.description}</p>
             </div>
           ))}
         </div>
@@ -131,13 +131,13 @@ const UseCasesSection: React.FC = () => {
         )}
 
         <div className="mt-16 text-center">
-          <h3 className={`text-2xl md:text-3xl ${readingMode ? 'text-gray-800' : 'text-white'} font-bold mb-6`}>
+          <h3 className={`text-2xl md:text-3xl ${readingMode ? 'text-black font-black' : 'text-white'} font-bold mb-6`}>
             Ready to Own Your Digital Future?
           </h3>
           <ScrollTypingEffect
             text="Secure your unique emotional avatar NFT and join the next generation of digital ownership on the blockchain."
             tag="p"
-            className={`${readingMode ? 'text-gray-700' : 'text-gray-300'} mb-8 max-w-2xl mx-auto`}
+            className={`${readingMode ? 'text-black font-black' : 'text-gray-300'} mb-8 max-w-2xl mx-auto`}
             delay={30}
           />
           <div className="flex flex-wrap justify-center gap-4">
