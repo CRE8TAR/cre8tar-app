@@ -1,5 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -92,11 +91,6 @@
     font-weight: 700;
   }
 
-  /* VT323 font for headings */
-  h1, h2, h3 {
-    font-family: 'VT323', monospace;
-  }
-
   .pixel-text {
     @apply font-silkscreen;
   }
@@ -129,14 +123,14 @@
 
   p {
     color: white;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 700;
   }
   
   .reading-mode p {
     color: #000000;
     font-weight: 900;
-    font-size: 19px;
+    font-size: 17px;
   }
   
   /* Enhanced section heading styles */

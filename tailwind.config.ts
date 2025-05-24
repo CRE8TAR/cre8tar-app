@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -21,7 +22,6 @@ export default {
 			fontFamily: {
 				'silkscreen': ['Silkscreen', 'cursive'],
 				'doto': ['Doto', 'sans-serif'],
-				'vt323': ['VT323', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
