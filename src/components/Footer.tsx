@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
                 alt="CRE8TAR logo" 
                 className="h-9 w-auto"
               />
-              <h3 className={`ml-2 font-bold text-xl ${readingMode ? 'text-gray-800' : 'text-white'}`}>C8</h3>
+              <h3 className={`ml-2 font-bold text-xl ${readingMode ? 'text-gray-800' : 'text-white'}`}>cre8tar</h3>
             </a>
             <p className={`${readingMode ? 'text-gray-900 font-semibold' : 'text-gray-100'} mb-4`}>
               The future of emotionally intelligent avatars begins here.
