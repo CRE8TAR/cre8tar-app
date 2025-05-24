@@ -31,13 +31,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? readingMode 
-            ? 'bg-white/90 backdrop-blur-lg border-b border-gray-200' 
-            : 'bg-black/70 backdrop-blur-lg'
-          : 'bg-transparent'
-      } ${readingMode ? 'reading-mode' : ''}`}
+      className="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
