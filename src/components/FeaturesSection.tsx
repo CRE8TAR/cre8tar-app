@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { CreditCard, Coins, Wallet, Vote } from 'lucide-react';
 import Modal from './ui/modal';
 import { useTheme } from '@/contexts/ThemeContext';
+import TypewriterEffect from './TypewriterEffect';
 
 // Feature data with additional modal content
 const features = [
@@ -46,9 +47,11 @@ const FeaturesSection: React.FC = () => {
           <h2 className={`text-4xl md:text-5xl font-doto font-bold ${readingMode ? 'text-black font-black' : 'gradient-text'} mb-4`}>
             Web3 Features
           </h2>
-          <p className={`${readingMode ? 'text-black font-black' : 'text-gray-300'} font-doto`}>
-            Experience next-generation avatars with blockchain technology at their core
-          </p>
+         <TypewriterEffect 
+            text="Experience next-generation avatars with blockchain technology at their core."
+            delay={10}
+            className={`font-doto ${readingMode ? 'text-gray-800' : 'text-white'} font-bold text-[20px] hover:text-cre8-purple transition-colors text-base py-1`}
+          />
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
