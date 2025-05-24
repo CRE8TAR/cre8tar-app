@@ -89,7 +89,7 @@ const UseCasesSection: React.FC = () => {
           <ScrollTypingEffect
             text="How CRE8TAR's on-chain avatars are transforming the blockchain ecosystem"
             tag="p"
-            className={`${readingMode ? 'text-black font-black' : 'text-gray-300'} font-doto`}
+            className={`${readingMode ? 'text-black font-black' : 'text-gray-100'} font-doto text-[20px]`}
             delay={40}
           />
         </div>
@@ -113,7 +113,7 @@ const UseCasesSection: React.FC = () => {
               </div>
               <h3 className={`text-2xl font-bold ${readingMode ? 'text-black font-black' : 'text-white'} mb-2`}>{useCase.title}</h3>
               <h4 className="text-lg text-cre8-purple mb-3">{useCase.subtitle}</h4>
-              <p className={`${readingMode ? 'text-black font-black' : 'text-gray-300'}`}>{useCase.description}</p>
+              <p className={`${readingMode ? 'text-black font-black' : 'text-gray-100'}`}>{useCase.description}</p>
             </div>
           ))}
         </div>
@@ -123,11 +123,13 @@ const UseCasesSection: React.FC = () => {
             isOpen={selectedUseCase !== null}
             onClose={closeModal}
             title={useCases[selectedUseCase].title}
+            readingMode={readingMode} // pass it here
           >
             <div className="whitespace-pre-wrap">
               {useCases[selectedUseCase].modalContent}
             </div>
           </Modal>
+
         )}
 
         <div className="mt-16 text-center">
