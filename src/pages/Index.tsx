@@ -7,6 +7,7 @@ import FeaturesSection from '@/components/FeaturesSection';
 import UseCasesSection from '@/components/UseCasesSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import TeaserSection from '@/components/TeaserSection';
+import FAQSection from '@/components/FAQSection';
 import EarlyAccessSection from '@/components/EarlyAccessSection';
 import Footer from '@/components/Footer';
 
@@ -20,6 +21,7 @@ const Index: React.FC = () => {
       <UseCasesSection />
       <HowItWorksSection />
       <TeaserSection />
+      <FAQSection />
       <EarlyAccessSection />
       <Footer />
     </div>
