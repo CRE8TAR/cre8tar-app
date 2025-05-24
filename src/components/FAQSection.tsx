@@ -58,7 +58,7 @@ const FAQSection: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-5xl font-doto font-bold ${readingMode ? 'text-black font-black' : 'gradient-text'} mb-4`}>
-            FAQ – Frequently Asked Questions
+            Frequently Asked Questions
           </h2>
           <p className={`${readingMode ? 'text-black font-black' : 'text-gray-100'} font-doto text-[20px]`}>
             Everything you need to know about CRE8TAR
@@ -73,7 +73,7 @@ const FAQSection: React.FC = () => {
             {faqData.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className={`border-b ${readingMode ? 'border-gray-400' : 'border-[#1A1D2E]'}`}>
                 <AccordionTrigger className={`text-left ${readingMode ? 'text-black font-black hover:text-cre8-purple' : 'text-white hover:text-cre8-purple'} text-lg font-bold`}>
-                  ❓ {faq.question}
+                  > {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className={`${readingMode ? 'text-black font-black' : 'text-gray-300'} text-base leading-relaxed whitespace-pre-line`}>
                   {faq.answer}
