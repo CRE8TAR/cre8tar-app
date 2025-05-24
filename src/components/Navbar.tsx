@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
                 alt="CRE8TAR logo" 
                 className="h-9 w-auto"
               />
-              <h3 className={`ml-2 font-bold text-xl ${readingMode ? 'text-gray-800' : 'text-white'}`}>C8</h3>
+              <h3 className={`ml-2 font-bold text-xl ${readingMode ? 'text-gray-800' : 'text-white'}`}></h3>
             </a>
           </div>
 
