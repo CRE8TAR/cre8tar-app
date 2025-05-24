@@ -86,7 +86,7 @@
   }
   
   .reading-mode body {
-    @apply bg-slate-100 text-gray-900;
+    @apply bg-white text-gray-900 font-semibold;
   }
 
   .pixel-text {
@@ -114,7 +114,7 @@
   }
   
   .reading-mode .glass-panel {
-    @apply bg-white border border-gray-200 shadow-md;
+    @apply bg-gradient-to-b from-gray-100 to-gray-200 border border-gray-300 shadow-md;
   }
 
   p {
@@ -133,7 +133,7 @@
   }
   
   .reading-mode section h2 {
-    @apply text-gray-900;
+    @apply text-gray-900 font-extrabold;
   }
   
   /* Enhanced card hover effects */
@@ -141,29 +141,24 @@
     @apply transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_20px_rgba(155,135,245,0.2)];
   }
   
-  .reading-mode .gradient-text {
-    @apply text-transparent bg-gradient-to-r from-gray-700 to-gray-900;
-  }
-  
   /* Light mode navbar */
   .reading-mode nav {
-    @apply bg-white/80 backdrop-blur-lg border-b border-gray-200;
+    @apply bg-white/90 backdrop-blur-lg border-b border-gray-200;
   }
   
   /* Light mode sections */
   .reading-mode section {
-    @apply bg-gradient-to-b from-slate-50 to-slate-100;
+    @apply bg-gradient-to-b from-white to-gray-50;
   }
 
   /* Hero section in light mode */
   .reading-mode section:first-of-type .absolute.inset-0 {
-    @apply bg-gradient-to-r from-slate-100 to-slate-200;
+    @apply bg-gradient-to-r from-gray-100 to-gray-200;
   }
   
   /* Footer in light mode */
   .reading-mode footer {
-    @apply bg-slate-100;
-    color: #1f2937;
+    @apply bg-gray-100;
   }
   
   /* Card hover effects */
@@ -172,18 +167,18 @@
   }
   
   .reading-mode .card-hover {
-    @apply hover:shadow-xl hover:shadow-slate-200/50;
+    @apply hover:shadow-xl hover:shadow-gray-300/50;
   }
   
   /* Text in nav for light mode */
   .reading-mode nav a {
-    @apply text-gray-800;
+    @apply text-gray-800 font-semibold;
   }
   
   /* Fix for the TypewriterEffect in reading mode */
   .reading-mode .TypewriterEffect,
   .reading-mode [class*="TypewriterEffect"] {
-    @apply text-gray-800;
+    @apply text-gray-800 font-semibold;
   }
   
   /* Ensuring all text elements in reading mode have dark text */
@@ -195,36 +190,23 @@
   .reading-mode h6,
   .reading-mode span,
   .reading-mode div {
-    @apply text-gray-800;
+    @apply text-gray-800 font-semibold;
   }
   
   /* Make sure code blocks and pre elements are readable in light mode */
   .reading-mode pre, 
   .reading-mode code {
-    @apply bg-gray-100 text-gray-800;
+    @apply bg-gray-100 text-gray-800 font-semibold;
   }
   
   .reading-mode pre code {
-    @apply text-gray-800;
+    @apply text-gray-800 font-semibold;
   }
   
   /* Fix for the ScrollTypingEffect component */
   .reading-mode .ScrollTypingEffect,
   .reading-mode [class*="ScrollTypingEffect"] {
-    @apply text-gray-800;
-  }
-
-  /* Update footer in light mode */
-  .reading-mode footer {
-    @apply bg-gray-100;
-  }
-
-  .reading-mode footer .text-gray-400 {
-    @apply text-gray-600;
-  }
-
-  .reading-mode footer h3 {
-    color: #1f2937;
+    @apply text-gray-800 font-semibold;
   }
 
   /* Button styling in light mode */
@@ -238,7 +220,18 @@
   }
 
   /* Fix HeroSection TypewriterEffect in light mode */
-  .reading-mode section:first-of-type .text-white {
-    @apply text-gray-800;
+  .reading-mode section:first-of-type {
+    color: #1f2937;
+    font-weight: 600;
+  }
+  
+  /* Silver theme for light mode cards */
+  .reading-mode .silver-card {
+    @apply bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 border border-gray-400 shadow-lg;
+  }
+  
+  /* Enhanced silver styling for light mode */
+  .reading-mode .silver-gradient {
+    @apply bg-gradient-to-r from-gray-300 via-gray-100 to-gray-300;
   }
 }

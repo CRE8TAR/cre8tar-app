@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import Logo from './Logo';
 import { Menu, X, Wallet, Sun, Moon } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -33,13 +32,24 @@ const Navbar: React.FC = () => {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/70 backdrop-blur-lg' : 'bg-transparent'
+        isScrolled 
+          ? readingMode 
+            ? 'bg-white/90 backdrop-blur-lg border-b border-gray-200' 
+            : 'bg-black/70 backdrop-blur-lg'
+          : 'bg-transparent'
       } ${readingMode ? 'reading-mode' : ''}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <Logo />
+            <a href="/" className="flex items-center cursor-pointer">
+              <img 
+                src={readingMode ? "/lovable-uploads/34b261f0-50ce-4005-934b-c3582b4f0e37.png" : "/Logo_C8.png"}
+                alt="CRE8TAR logo" 
+                className="h-9 w-auto"
+              />
+              <h3 className={`ml-2 font-bold text-xl ${readingMode ? 'text-gray-800' : 'text-white'}`}>C8</h3>
+            </a>
           </div>
 
           {/* Desktop menu */}
@@ -50,7 +60,9 @@ const Navbar: React.FC = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className="font-doto text-white font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors"
+                    className={`font-doto font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors ${
+                      readingMode ? 'text-gray-800' : 'text-white'
+                    }`}
                   >
                     {item.name}
                   </Link>
@@ -58,7 +70,9 @@ const Navbar: React.FC = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="font-doto text-white font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors"
+                    className={`font-doto font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors ${
+                      readingMode ? 'text-gray-800' : 'text-white'
+                    }`}
                   >
                     {item.name}
                   </a>
@@ -68,24 +82,27 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button className="bg-transparent border border-cre8-purple hover:bg-cre8-purple/20 text-white flex items-center gap-2">
+            <Button className={`${
+              readingMode 
+                ? 'bg-blue-100 border border-blue-300 hover:bg-blue-200 text-blue-800' 
+                : 'bg-transparent border border-cre8-purple hover:bg-cre8-purple/20 text-white'
+            } flex items-center gap-2`}>
               <Wallet size={16} />
               Wallet
             </Button>
             
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-black/30 border border-white/10">
+            <div className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${
+              readingMode ? 'bg-gray-100 border border-gray-300' : 'bg-black/30 border border-white/10'
+            }`}>
               {readingMode ? 
-                <Sun size={18} className="text-black" /> : 
+                <Sun size={18} className="text-gray-800" /> : 
                 <Moon size={18} className="text-white" />
               }
               <Switch 
                 checked={readingMode} 
                 onCheckedChange={toggleReadingMode} 
-                className="data-[state=checked]:bg-white"
+                className="data-[state=checked]:bg-gray-600"
               />
-              <span className={`text-sm font-medium ${readingMode ? "text-black" : "text-white"}`}>
-                {readingMode ? "" : ""}
-              </span>
             </div>
           </div>
 
@@ -93,18 +110,18 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center gap-3">
             <div className="flex items-center">
               {readingMode ? 
-                <Sun size={18} className="text-black" /> : 
+                <Sun size={18} className="text-gray-800" /> : 
                 <Moon size={18} className="text-white" />
               }
               <Switch 
                 checked={readingMode} 
                 onCheckedChange={toggleReadingMode} 
-                className="ml-1 data-[state=checked]:bg-white"
+                className="ml-1 data-[state=checked]:bg-gray-600"
               />
             </div>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-white hover:text-cre8-purple"
+              className={`hover:text-cre8-purple ${readingMode ? 'text-gray-800' : 'text-white'}`}
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -118,14 +135,16 @@ const Navbar: React.FC = () => {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-lg">
+        <div className={`md:hidden ${readingMode ? 'bg-white/95 backdrop-blur-lg border-b border-gray-200' : 'bg-black/95 backdrop-blur-lg'}`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               item.href.startsWith('/') ? (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="block font-doto text-white font-bold hover:text-cre8-purple px-3 py-2 text-lg"
+                  className={`block font-doto font-bold hover:text-cre8-purple px-3 py-2 text-lg ${
+                    readingMode ? 'text-gray-800' : 'text-white'
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -134,7 +153,9 @@ const Navbar: React.FC = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="block font-doto text-white font-bold hover:text-cre8-purple px-3 py-2 text-lg"
+                  className={`block font-doto font-bold hover:text-cre8-purple px-3 py-2 text-lg ${
+                    readingMode ? 'text-gray-800' : 'text-white'
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -143,7 +164,11 @@ const Navbar: React.FC = () => {
             ))}
             
             <Button 
-              className="w-full mt-4 bg-transparent border border-cre8-purple hover:bg-cre8-purple/20 text-white flex items-center justify-center gap-2"
+              className={`w-full mt-4 ${
+                readingMode 
+                  ? 'bg-blue-100 border border-blue-300 hover:bg-blue-200 text-blue-800' 
+                  : 'bg-transparent border border-cre8-purple hover:bg-cre8-purple/20 text-white'
+              } flex items-center justify-center gap-2`}
             >
               <Wallet size={20} />
               Wallet
