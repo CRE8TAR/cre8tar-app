@@ -58,10 +58,10 @@ const HowItWorksSection: React.FC = () => {
                 ? 'bg-gradient-to-b from-gray-100 to-gray-200 border border-gray-300 shadow-md' 
                 : 'glass-panel'} p-8 relative hover:shadow-[0_0_25px_rgba(155,135,245,0.2)] transition-all duration-500 hover:scale-105 transform-gpu rounded-xl`}
             >
-              <div className={`absolute -top-4 -left-4 ${readingMode ? 'bg-cre8-purple-dark' : 'bg-cre8-purple'} ${readingMode ? 'text-white' : 'text-black'} font-silkscreen font-bold py-1 px-3 rounded-md`}>
+              <div className={`absolute -top-4 -left-4 ${readingMode ? 'bg-cre8-purple-dark' : 'bg-cre8-purple'} ${readingMode ? 'gradient-text' : 'text-black'} font-silkscreen font-bold py-1 px-3 rounded-md`}>
                 {step.number}
               </div>
-              <h3 className={`text-2xl font-bold ${readingMode ? 'text-gray-800' : ''} mb-3 mt-4`}>{step.title}</h3>
+              <h3 className ={`text-2xl font-bold ${readingMode ? 'text-gray-800' : 'gradient-text'} mb-3 mt-4`}>{step.title}</h3>
               <p className={`${readingMode ? 'text-gray-600' : ''}`}>{step.description}</p>
             </div>
           ))}
