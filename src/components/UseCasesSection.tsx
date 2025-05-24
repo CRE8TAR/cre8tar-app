@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Award, Palette, Globe, Users } from 'lucide-react';
 import Modal from './ui/modal';
@@ -123,13 +122,11 @@ const UseCasesSection: React.FC = () => {
             isOpen={selectedUseCase !== null}
             onClose={closeModal}
             title={useCases[selectedUseCase].title}
-            readingMode={readingMode} // pass it here
           >
             <div className="whitespace-pre-wrap">
               {useCases[selectedUseCase].modalContent}
             </div>
           </Modal>
-
         )}
 
         <div className="mt-16 text-center">
