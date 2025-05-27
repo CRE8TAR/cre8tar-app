@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, Wallet, Sun, Moon, ChevronDown } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
 import { useTheme } from '@/contexts/ThemeContext';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -31,16 +31,51 @@ const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [platformDropdownOpen, setPlatformDropdownOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const { readingMode, toggleReadingMode } = useTheme();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
+      
+      if (isHomePage) {
+        // Track which section is currently in view
+        const sections = ['features', 'use-cases', 'faq', 'early-access'];
+        const currentSection = sections.find(section => {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top <= 100 && rect.bottom >= 100;
+          }
+          return false;
+        });
+        
+        if (currentSection) {
+          setActiveSection(currentSection);
+        } else if (window.scrollY < 200) {
+          setActiveSection('home');
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isHomePage]);
+
+  const getNavItemClass = (href: string) => {
+    const isActive = (href === '#' && activeSection === 'home') || 
+                    (href.includes(activeSection) && activeSection !== 'home');
+    
+    return `font-doto font-bold px-2 py-1 text-base transition-all duration-300 ${
+      readingMode ? 'text-gray-800' : 'text-white'
+    } ${
+      isActive 
+        ? `text-cre8-purple scale-110 ${readingMode ? 'drop-shadow-md' : 'drop-shadow-[0_0_8px_rgba(155,135,245,0.6)]'}`
+        : 'hover:text-cre8-purple'
+    }`;
+  };
 
   return (
     <nav 
@@ -67,9 +102,7 @@ const Navbar: React.FC = () => {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`font-doto font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors ${
-                      readingMode ? 'text-gray-800' : 'text-white'
-                    }`}
+                    className={getNavItemClass(item.href)}
                   >
                     {item.name}
                   </Link>
@@ -77,9 +110,7 @@ const Navbar: React.FC = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className={`font-doto font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors ${
-                      readingMode ? 'text-gray-800' : 'text-white'
-                    }`}
+                    className={getNavItemClass(item.href)}
                   >
                     {item.name}
                   </a>
