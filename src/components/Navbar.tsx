@@ -1,24 +1,36 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Wallet, Sun, Moon } from 'lucide-react';
+import { Menu, X, Wallet, Sun, Moon, ChevronDown } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
 import { useTheme } from '@/contexts/ThemeContext';
 import { Link } from 'react-router-dom';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const navItems = [
   { name: 'Home', href: '#' },
   { name: 'Features', href: '#features' },
-  { name: 'Marketplace', href: '#marketplace' },
   { name: 'Use Cases', href: '#use-cases' },
-  { name: 'Stake & Governance', href: '#governance' },
   { name: 'FAQ', href: '#faq' },
   { name: 'Early Access', href: '#early-access' }
+];
+
+const platformItems = [
+  { name: 'Marketplace', href: '/marketplace' },
+  { name: 'Stake & Governance', href: '/stake-governance' },
+  { name: 'Avatar Minting', href: '/avatar-minting' },
+  { name: 'Fusion Lab', href: '/fusion-lab' }
 ];
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [platformDropdownOpen, setPlatformDropdownOpen] = useState(false);
   const { readingMode, toggleReadingMode } = useTheme();
 
   useEffect(() => {
@@ -73,6 +85,32 @@ const Navbar: React.FC = () => {
                   </a>
                 )
               ))}
+              
+              {/* Platform Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className={`font-doto font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors flex items-center gap-1 ${
+                    readingMode ? 'text-gray-800' : 'text-white'
+                  }`}>
+                    Platform
+                    <ChevronDown size={16} />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className={`${readingMode ? 'bg-white border-gray-200' : 'bg-black/90 border-gray-700'} backdrop-blur-md`}>
+                  {platformItems.map((item) => (
+                    <DropdownMenuItem key={item.name} asChild>
+                      <Link
+                        to={item.href}
+                        className={`font-doto font-bold hover:text-cre8-purple cursor-pointer ${
+                          readingMode ? 'text-gray-800' : 'text-white'
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
 
@@ -157,6 +195,34 @@ const Navbar: React.FC = () => {
                 </a>
               )
             ))}
+            
+            {/* Mobile Platform Menu */}
+            <div 
+              className={`block font-doto font-bold px-3 py-2 text-lg cursor-pointer ${
+                readingMode ? 'text-gray-800' : 'text-white'
+              }`}
+              onClick={() => setPlatformDropdownOpen(!platformDropdownOpen)}
+            >
+              Platform
+              <ChevronDown size={16} className={`inline ml-2 transition-transform ${platformDropdownOpen ? 'rotate-180' : ''}`} />
+            </div>
+            
+            {platformDropdownOpen && (
+              <div className="pl-6">
+                {platformItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`block font-doto font-bold hover:text-cre8-purple px-3 py-2 text-base ${
+                      readingMode ? 'text-gray-600' : 'text-gray-300'
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+              </div>
+            )}
             
             <Button 
               className={`w-full mt-4 ${

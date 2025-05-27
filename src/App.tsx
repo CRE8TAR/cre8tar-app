@@ -13,6 +13,10 @@ import Whitepaper from "./pages/Whitepaper";
 import Documentation from "./pages/Documentation";
 import TokenInfo from "./pages/TokenInfo";
 import ApiReference from "./pages/ApiReference";
+import Marketplace from "./pages/Marketplace";
+import StakeGovernance from "./pages/StakeGovernance";
+import AvatarMinting from "./pages/AvatarMinting";
+import FusionLab from "./pages/FusionLab";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +35,10 @@ const App = () => (
             <Route path="/documentation" element={<Documentation />} />
             <Route path="/token-info" element={<TokenInfo />} />
             <Route path="/api-reference" element={<ApiReference />} />
+            <Route path="/marketplace" element={<Marketplace />} />
+            <Route path="/stake-governance" element={<StakeGovernance />} />
+            <Route path="/avatar-minting" element={<AvatarMinting />} />
+            <Route path="/fusion-lab" element={<FusionLab />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
