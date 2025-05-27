@@ -107,7 +107,7 @@ const UseCasesSection: React.FC = () => {
                 transition-all duration-500 cursor-pointer transform-gpu hover:translate-y-[-5px]`}
               onClick={() => openModal(index)}
             >
-              <div className={`mb-6 ${readingMode ? 'bg-gray-400 p-3 rounded-full inline-block' : ''}`}>
+              <div className={`mb-6 ${readingMode ? 'bg-black p-3 rounded-full inline-block' : ''}`}>
                 {useCase.icon}
               </div>
               <h3 className={`text-2xl font-bold ${readingMode ? 'text-black font-black' : 'text-white'} mb-2`}>{useCase.title}</h3>

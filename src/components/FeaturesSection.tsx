@@ -68,7 +68,7 @@ const FeaturesSection: React.FC = () => {
                 transition-all duration-500 cursor-pointer transform-gpu hover:translate-y-[-5px]`}
               onClick={() => openModal(index)}
             >
-              <div className={`${readingMode ? 'bg-gray-400' : 'bg-[#15172A]'} p-4 inline-block rounded-lg mb-5`}>
+              <div className={`${readingMode ? 'bg-black' : 'bg-[#15172A]'} p-4 inline-block rounded-lg mb-5`}>
                 {feature.icon}
               </div>
               <h3 className={`text-2xl font-extrabold ${readingMode ? 'text-black font-black' : 'text-[#e0e0e0]'} mb-3`}>{feature.title}</h3>
