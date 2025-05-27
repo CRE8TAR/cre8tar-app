@@ -208,6 +208,14 @@
     font-weight: 900;
   }
   
+  /* Gradient text for headings in light mode */
+  .reading-mode h1,
+  .reading-mode h2,
+  .reading-mode h3 {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-purple-800;
+    font-weight: 900;
+  }
+  
   /* Make sure code blocks and pre elements are readable in light mode */
   .reading-mode pre, 
   .reading-mode code {
