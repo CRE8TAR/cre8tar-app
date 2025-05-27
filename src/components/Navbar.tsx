@@ -68,18 +68,24 @@ const Navbar: React.FC = () => {
     const isActive = (href === '#' && activeSection === 'home') || 
                     (href.includes(activeSection) && activeSection !== 'home');
     
-    return `font-doto font-bold px-2 py-1 text-base transition-all duration-300 ${
-      readingMode ? 'text-gray-800' : 'text-white'
+    return `font-doto font-bold px-4 py-2 text-base transition-all duration-300 rounded-lg backdrop-blur-md border border-white/10 ${
+      readingMode 
+        ? 'text-gray-800 bg-white/20 hover:bg-white/30' 
+        : 'text-white bg-black/20 hover:bg-black/30'
     } ${
       isActive 
-        ? `text-cre8-purple scale-110 ${readingMode ? 'drop-shadow-md' : 'drop-shadow-[0_0_8px_rgba(155,135,245,0.6)]'}`
+        ? `text-cre8-purple scale-110 ${readingMode ? 'drop-shadow-md bg-white/40' : 'drop-shadow-[0_0_8px_rgba(155,135,245,0.6)] bg-black/40'}`
         : 'hover:text-cre8-purple'
     }`;
   };
 
   return (
     <nav 
-      className="fixed top-0 w-full z-50 transition-all duration-300 bg-black/50 backdrop-blur-md"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        readingMode 
+          ? 'bg-white/10 backdrop-blur-xl border-b border-gray-200/20' 
+          : 'bg-black/10 backdrop-blur-xl border-b border-white/10'
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
@@ -94,9 +100,9 @@ const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {/* Desktop menu */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-6">
+          {/* Desktop menu - evenly spaced */}
+          <div className="hidden md:flex flex-1 justify-center">
+            <div className="flex items-center space-x-2">
               {navItems.map((item) => (
                 item.href.startsWith('/') ? (
                   <Link
@@ -120,14 +126,16 @@ const Navbar: React.FC = () => {
               {/* Platform Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <button className={`font-doto font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors flex items-center gap-1 ${
-                    readingMode ? 'text-gray-800' : 'text-white'
-                  }`}>
+                  <button className={`font-doto font-bold px-4 py-2 text-base transition-all duration-300 rounded-lg backdrop-blur-md border border-white/10 flex items-center gap-1 ${
+                    readingMode 
+                      ? 'text-gray-800 bg-white/20 hover:bg-white/30' 
+                      : 'text-white bg-black/20 hover:bg-black/30'
+                  } hover:text-cre8-purple`}>
                     Platform
                     <ChevronDown size={16} />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className={`${readingMode ? 'bg-white border-gray-200' : 'bg-black/90 border-gray-700'} backdrop-blur-md`}>
+                <DropdownMenuContent className={`${readingMode ? 'bg-white/90 border-gray-200/50 backdrop-blur-xl' : 'bg-black/90 border-gray-700/50 backdrop-blur-xl'}`}>
                   {platformItems.map((item) => (
                     <DropdownMenuItem key={item.name} asChild>
                       <Link
@@ -146,17 +154,17 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
-            <Button className={`${
+            <Button className={`backdrop-blur-md ${
               readingMode 
-                ? 'bg-blue-100 border border-blue-300 hover:bg-blue-200 text-blue-800' 
-                : 'bg-transparent border border-cre8-purple hover:bg-cre8-purple/20 text-white'
+                ? 'bg-blue-100/50 border border-blue-300/50 hover:bg-blue-200/50 text-blue-800' 
+                : 'bg-transparent border border-cre8-purple/50 hover:bg-cre8-purple/20 text-white'
             } flex items-center gap-2`}>
               <Wallet size={16} />
               Wallet
             </Button>
             
-            <div className={`flex items-center gap-2 px-3 py-1.5 rounded-md ${
-              readingMode ? 'bg-gray-100 border border-gray-300' : 'bg-black/30 border border-white/10'
+            <div className={`flex items-center gap-2 px-3 py-1.5 rounded-md backdrop-blur-md ${
+              readingMode ? 'bg-gray-100/50 border border-gray-300/50' : 'bg-black/30 border border-white/10'
             }`}>
               {readingMode ? 
                 <Sun size={18} className="text-gray-800" /> : 
