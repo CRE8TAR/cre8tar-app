@@ -14,7 +14,7 @@ const TeaserSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-5xl font-doto font-bold mb-4 ${
-            readingMode ? 'text-gray-800' : 'gradient-text'
+            readingMode ? 'bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-purple-800 font-black' : 'gradient-text'
           }`}>
             See CRE8TAR in Action
           </h2>
@@ -45,7 +45,7 @@ const TeaserSection: React.FC = () => {
             </div>
             
             <h3 className={`text-4xl md:text-5xl font-doto font-bold mb-6 ${
-              readingMode ? 'text-gray-800' : 'gradient-text'
+              readingMode ? 'bg-clip-text text-transparent bg-gradient-to-r from-purple-600 via-blue-600 to-purple-800 font-black' : 'gradient-text'
             }`}>
               Video Teaser Coming Soon
             </h3>
