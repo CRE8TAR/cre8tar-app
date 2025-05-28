@@ -68,18 +68,12 @@ const Navbar: React.FC = () => {
     const isActive = (href === '#' && activeSection === 'home') || 
                     (href.includes(activeSection) && activeSection !== 'home');
     
-    return `font-doto font-bold px-2 py-1 text-base transition-all duration-500 transform ${
+    return `font-doto font-bold px-2 py-1 text-base transition-all duration-300 ${
       readingMode ? 'text-gray-800' : 'text-white'
     } ${
       isActive 
-        ? `scale-125 text-lg bg-gradient-to-r ${
-            readingMode 
-              ? 'from-purple-600 via-blue-600 to-purple-800' 
-              : 'from-cre8-neon-blue via-cre8-purple to-cre8-neon-pink'
-          } bg-clip-text text-transparent font-black ${
-            readingMode ? '' : 'drop-shadow-[0_0_8px_rgba(155,135,245,0.6)]'
-          }`
-        : 'hover:text-cre8-purple hover:scale-105'
+        ? `text-cre8-purple scale-110 ${readingMode ? 'drop-shadow-md' : 'drop-shadow-[0_0_8px_rgba(155,135,245,0.6)]'}`
+        : 'hover:text-cre8-purple'
     }`;
   };
 
@@ -126,7 +120,7 @@ const Navbar: React.FC = () => {
               {/* Platform Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <button className={`font-doto font-bold hover:text-cre8-purple hover:scale-105 px-2 py-1 text-base transition-all duration-300 flex items-center gap-1 ${
+                  <button className={`font-doto font-bold hover:text-cre8-purple px-2 py-1 text-base transition-colors flex items-center gap-1 ${
                     readingMode ? 'text-gray-800' : 'text-white'
                   }`}>
                     Platform
