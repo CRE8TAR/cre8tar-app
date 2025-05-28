@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
   const { readingMode } = useTheme();
   
   return (
-    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20">
+    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20" id="home">
       <div className="absolute inset-0 bg-[#05070F]">
         <div className={`absolute inset-0 ${readingMode ? 'bg-gradient-to-r from-slate-100 to-slate-200' : 'bg-hero-gradient opacity-20'}`}></div>
       </div>
