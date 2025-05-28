@@ -13,11 +13,11 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 const navItems = [
-  { name: 'Home', href: 'cre8tar.com' },
-  { name: 'Features', href: 'cre8tar.com/#features' },
-  { name: 'Use Cases', href: 'cre8tar.com/#use-cases' },
-  { name: 'FAQ', href: 'cre8tar.com/#faq' },
-  { name: 'Early Access', href: 'cre8tar.com/#early-access' }
+  { name: 'Home', href: '/' },
+  { name: 'Features', href: '/#features' },
+  { name: 'Use Cases', href: '/#use-cases' },
+  { name: 'FAQ', href: '/#faq' },
+  { name: 'Early Access', href: '/#early-access' }
 ];
 
 const platformItems = [
