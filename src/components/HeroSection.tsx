@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link2, Wallet } from 'lucide-react';
 import TypewriterEffect from './TypewriterEffect';
@@ -7,6 +7,30 @@ import { useTheme } from '@/contexts/ThemeContext';
 
 const HeroSection: React.FC = () => {
   const { readingMode } = useTheme();
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  const calculateImageTransform = () => {
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    
+    const deltaX = (mousePosition.x - centerX) / centerX;
+    const deltaY = (mousePosition.y - centerY) / centerY;
+    
+    // Limit the rotation to reasonable values
+    const rotateX = deltaY * 5; // Vertical mouse movement affects X rotation
+    const rotateY = -deltaX * 5; // Horizontal mouse movement affects Y rotation
+    
+    return `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  };
   
   return (
     <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-20" id="home">
@@ -42,7 +66,11 @@ const HeroSection: React.FC = () => {
           <img 
             src="/lovable-uploads/e8b9b94d-5876-4610-a9cc-d2b6b98dc95a.png" 
             alt="Statue with sunglasses in pink and blue lighting" 
-            className="w-full max-w-md transform hover:scale-105 transition-transform duration-300"
+            className="w-full max-w-md transition-transform duration-100 ease-out"
+            style={{
+              transform: calculateImageTransform(),
+              transformOrigin: 'center center'
+            }}
           />
         </div>
       </div>
