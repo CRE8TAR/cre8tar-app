@@ -13,11 +13,11 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'Features', href: '/#features' },
-  { name: 'Use Cases', href: '/#use-cases' },
-  { name: 'FAQ', href: '/#faq' },
-  { name: 'Early Access', href: '/#early-access' }
+  { name: 'Home', href: '#' },
+  { name: 'Features', href: '#features' },
+  { name: 'Use Cases', href: '#use-cases' },
+  { name: 'FAQ', href: '#faq' },
+  { name: 'Early Access', href: '#early-access' }
 ];
 
 const platformItems = [
