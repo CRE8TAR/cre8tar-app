@@ -55,7 +55,8 @@ const Footer: React.FC = () => {
           <div>
             <h3 className={`${readingMode ? 'text-gray-800 font-bold' : 'text-white'} text-lg font-bold mb-4`}>Resources</h3>
             <ul className="space-y-2">
-              <li><Link to="/documentation" className={`${readingMode ? 'text-gray-900 font-semibold' : 'text-gray-100'} hover:text-cre8-purple transition-colors`}>Documentation</Link></li>
+              <li><a href="https://cre8tar.gitbook.io/cre8tar" target="_blank" rel="noopener noreferrer" className={`${readingMode ? 'text-gray-900 font-semibold' : 'text-gray-100'} hover:text-cre8-purple transition-colors`}>Documentation</a></li>
+              <li><Link to="/whitepaper" className={`${readingMode ? 'text-gray-900 font-semibold' : 'text-gray-100'} hover:text-cre8-purple transition-colors`}>Whitepaper</Link></li>
               <li><Link to="/token-info" className={`${readingMode ? 'text-gray-900 font-semibold' : 'text-gray-100'} hover:text-cre8-purple transition-colors`}>Token Info</Link></li>
               <li><Link to="/api-reference" className={`${readingMode ? 'text-gray-900 font-semibold' : 'text-gray-100'} hover:text-cre8-purple transition-colors`}>API Reference</Link></li>
             </ul>
